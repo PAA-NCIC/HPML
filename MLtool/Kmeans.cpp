@@ -1,22 +1,59 @@
-#include <Kmeans.h>
+/*
+ID: septicmk
+LANG: C++
+TASK: Kmeans.cpp
+*/
+#include <algorithm>
+#include <vector>
+#include <cmath>
+#include <cstdio>
 
-namespace MLtool{
-    void Kmeans:: add(Kmeans rhs){
-        for (auto element: rhs.monoid){
-            for(auto &base: this->monoid){
-                if(base == element)
-                    base = base + element;
-                else
-                    this->monoid.push_back(element);
-            }
+namespace Kmeans{
+inline int Random(int mod){
+    return static_cast<int> (static_cast<double>(rand())/ RAND_MAX * mod);
+}
+
+
+// use Matrix to store centroids
+struct Matrix {
+    // data
+    size_t nrow, ncol;
+    std::vector<float> data;
+    std::vector<int> num;
+     
+    inline void Init(size_t nrow, size_t ncol){
+        this->nrow = nrow;
+        this->ncol = ncol;
+        data.resize(nrow * ncol);
+        num.resize(nrow);
+        std::fill(data.begin(), data.end(), 0.0f);
+        std::fill(data.begin(), data.end(), 0);
+    }
+
+    inline Matrix operator + (Matrix &rhs){
+        Matrix ret;
+        ret.Init(this->nrow, this->ncol);
+        for(size_t i = 0; i < data.size(); ++ i)
+            ret.data[i] = data[i] + rhs.data[i];
+        for(size_t i = 0; i < num.size(); ++ i)
+            ret.num[i] = num[i] + rhs.num[i];
+        return ret;
+    }
+
+    inline void Print() {
+        for (size_t i = 0; i < data.size(); ++ i){
+            char ch = ((i+1) % ncol == 0) ? '\n' : ' ';
+            printf("%.2f%c", data[i], ch);
         }
     }
 
-    void Kmeans:: init(){
-        monoid.clear();
-        conf = Config(1e-3, 10);
-    }
+};
 
-    bool Kmeans:: beginDataScan(){
-    }
+
+
 }
+
+int main() {
+    return 0;
+}
+
