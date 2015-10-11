@@ -19,7 +19,7 @@ inline std::vector<std::string> ReadCSV(std::string pwd){
 }
 
 int main(){
-    std::vector<std::string> data = ReadCSV("./data/iris.csv");
+    std::vector<std::string> data = ReadCSV("../data/iris.csv");
     std::vector<float> real;
     for (size_t i = 0; i < data.size(); ++i)
         real.push_back(atof(data[i].c_str()));
@@ -39,7 +39,7 @@ int main(){
     }
 
     std::ofstream file;
-    file.open("./data/iris_n.csv");	
+    file.open("../data/iris_n.csv");	
     for (size_t i = 0; i < real.size(); ++i){
         char ch = (i+1)%4 == 0 ? '\n' : ',';
         file << real[i]<< ch;
