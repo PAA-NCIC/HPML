@@ -7,6 +7,7 @@ TASK: Kmeans.cpp
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/serialization/vector.hpp>
 #include <boost/serialization/queue.hpp>
+#include <boost/serialization/export.hpp> 
 #include <boost/mpi.hpp>
 #include <algorithm>
 #include <vector>
@@ -18,7 +19,7 @@ TASK: Kmeans.cpp
 #include <fstream>  
 #include <string>
 
-namespace mpi = boost::mpi;
+//namespace mpi = boost::mpi;
 
 inline int Random(int mod){
     return static_cast<int> (static_cast<double>(rand())/ RAND_MAX * mod);
@@ -43,14 +44,14 @@ class MLalgorithm{
         size_t nrow, ncol;
         std::vector<double> data;
 
-        inline void Init(size_t nrow, size_t ncol){
+        void Init(size_t nrow, size_t ncol){
             this->nrow = nrow;
             this->ncol = ncol;
             data.resize(nrow * ncol);
             std::fill(data.begin(), data.end(), 0.0f);
         }
 
-        inline void add (std::vector<double> record, size_t i){
+        void add (std::vector<double> record, size_t i){
             for (size_t j = 0; j < record.size(); ++j){
                 data[ i*ncol + j ] += record[j];
             }
@@ -68,7 +69,7 @@ class MLalgorithm{
         virtual void beginDataScan(std::vector<double> records, size_t feat_dim) = 0;
         virtual MLalgorithm* processRecord (std::vector<double> records, size_t feat_dim)=0;
         virtual void endDataScan()=0;
-        virtual bool isConverged(size_t feat_dim, double eps)=0;
+        virtual bool isConverged(MLalgorithm* rhs, size_t feat_dim, double eps)=0;
         virtual void finish(std::vector<double> records, size_t feat_dim)=0;
 };
 
@@ -122,18 +123,29 @@ class Kmeans:public MLalgorithm{
                     data[i*ncol+j] /= data[i*ncol + ncol-1];
                 }
                 data[i*ncol + ncol-1] = 1;
-            } }
+            } 
+
+            //for(size_t i = 0; i < nrow; ++i){
+                //for(size_t j = 0; j < ncol; ++j){
+                    //std::cout << data[i*ncol+j] << " ";
+                //}
+                //std::puts("");
+            //}
+        }
 
         MLalgorithm* processRecord(std::vector<double> records, size_t feat_dim){
             MLalgorithm* pret = new Kmeans();
-            for (size_t i = 0 ; i < records.size() ; i++){
+            pret->Init(this->nrow, this->ncol);
+            size_t n_records = records.size()/feat_dim;
+            for (size_t i = 0 ; i < n_records ; i++){
                 std::vector<double> record;
                 record.clear();
                 for(size_t j = 0; j < feat_dim ; j ++){
                     record.push_back(records[i*feat_dim+j]);
                 }
-                double dis = (1<<16)-1;
+                double dis = (1L<<16)-1;
                 int who = -1;
+                //std::cout<<"bp"<<std::endl;
                 for(size_t k = 0; k < this->nrow; k++){
                     std::vector<double> centroid = this->get_value(k);
                     double tmp = 0;
@@ -152,17 +164,17 @@ class Kmeans:public MLalgorithm{
             return pret;
         }
 
-        bool isConverged(size_t feat_dim, double eps){
+        bool isConverged(MLalgorithm* rhs, size_t feat_dim, double eps){
             double diff = 0;
             for(size_t i = 0; i < nrow; i ++){
                 double tmp = 0;
                 for(size_t j = 0;  j < feat_dim; j++){
-                    tmp += data[i*ncol+j]*data[i*ncol+j];
+                    tmp += (data[i*ncol+j] - rhs->data[i*ncol+j]) * (data[i*ncol+j] - rhs->data[i*ncol+j]);
                 }
                 tmp = sqrt(tmp);
                 diff += tmp;
             }
-            if (abs(diff) <= eps) return true;
+            if (diff <= eps) return true;
             else return false;
 
         }
@@ -198,6 +210,7 @@ class Kmeans:public MLalgorithm{
 
         }
 };
+BOOST_CLASS_EXPORT(Kmeans)
 
 
 class Core{
@@ -246,8 +259,8 @@ class Core{
                 size_t feat_dim){
             std::vector<std::string> data = ReadCSV("../data/iris_n.csv");
             ptr->beginDataScan(partition(data,1,0,feat_dim), feat_dim);
-            mpi::environment env(argc, argv);
-            mpi::communicator world;
+            boost::mpi::environment env(argc, argv);
+            boost::mpi::communicator world;
             int rank = world.rank();
             size_t number = world.size();
             size_t n_records = data.size()/ feat_dim;
@@ -257,27 +270,30 @@ class Core{
 
             bool done = 0;
             while(!done){
-
                 boost::mpi::broadcast(world, ptr, 0);
                 MLalgorithm* local_update = ptr->processRecord(records, feat_dim);
-
+                
+                world.barrier();
+                //if(rank ==0 ) std::cout<<"flag"<<std::endl;
                 if(rank == 0){
-                    std::cout << "[iteration] " << iter_num++;
+                    std::cout << "[iteration] " << iter_num++ << std::endl;
                     MLalgorithm* ptmp;
                     MLalgorithm* global_updata = local_update;
                     for(size_t i = 1; i < world.size(); ++i){
                         world.recv(boost::mpi::any_source, i, ptmp);
+                        global_updata = *global_updata + *ptmp;
                     }
-                    global_updata = *global_updata + *ptmp;
-                    done = global_updata->isConverged(feat_dim, eps);
-                    ptr = *ptr + *global_updata;
-                    ptr->endDataScan();
+                    MLalgorithm *pafter = *ptr + *global_updata;
+                    pafter->endDataScan();
+                    done = pafter->isConverged(ptr, feat_dim, eps);
+                    ptr = pafter;
                 }else{
                     world.send(0, rank, local_update);
                 }
                 boost::mpi::broadcast(world, done, 0);
             }
             if(rank == 0){
+                std::cout << "done" << std::endl;
                 std::vector<double> records;
                 for(size_t i = 0; i < data.size(); ++i){
                     records.push_back(atof(data[i].c_str()));
@@ -292,6 +308,6 @@ int main(int argc,char *argv[]){
     MLalgorithm *ptr = new Kmeans();
     ptr->Init(3,5);
 
-    p->mainLoop(argc, argv, ptr, 1e-5, 4);
+    p->mainLoop(argc, argv, ptr, 1e-7, 4);
     return 0;
 }
