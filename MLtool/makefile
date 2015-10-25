@@ -18,4 +18,5 @@ main: main.o $(OBJS)
 -include $(OBJS:.o=.d)
 .PHONY:clean 
 clean:
-	find ./ -name *.o -o -name *.d -o -name *.d.* | xargs rm -f
+	@rm -f $(TARGETS)
+	@find ./ -name *.o -o -name *.d -o -name *.d.* | xargs rm -f
