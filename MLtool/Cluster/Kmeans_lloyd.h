@@ -1,17 +1,17 @@
 /*
-ID: septicmk
+ID:neo-white 
 LANG: C++
-TASK: Kmeans.h
+TASK: Kmeans_lloyd.h
 */
 
-#ifndef __KMEANS
-#define __KMEANS
+#ifndef __KMEANS_LLOYD
+#define __KMEANS_LLOYD
 
 #include "../MLalgorithm/MLalgorithm.h"
 #include <boost/serialization/vector.hpp>
 #include <vector>
 
-class Kmeans:public MLalgorithm{
+class Kmeans_lloyd:public MLalgorithm{
     private:
         friend class boost::serialization::access;
         template <typename Archive>
@@ -19,14 +19,18 @@ class Kmeans:public MLalgorithm{
                 ar & boost::serialization::base_object<MLalgorithm>(*this);
             }
     public:
+        size_t n_cluster;
         MLalgorithm* operator +(MLalgorithm &rhs);
-        void beginDataScan(std::vector<double> records, size_t feat_dim);
+        void beginDataScan(Flexible_vector *records, size_t feat_dim);
         void endDataScan();
-        MLalgorithm* processRecord(std::vector<double> records, size_t feat_dim);
+        MLalgorithm* processRecord(Flexible_vector *records, size_t feat_dim);
         bool isConverged(MLalgorithm* rhs, size_t feat_dim, double eps);
-        void finish(std::vector<double> records, size_t feat_dim);
+        void finish(Flexible_vector *records, size_t feat_dim);
+
+        std::vector<int> init_random(size_t length, size_t random_seed);
 };
 
 #endif
+
 
 

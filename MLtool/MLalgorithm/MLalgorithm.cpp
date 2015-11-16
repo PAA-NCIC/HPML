@@ -3,6 +3,10 @@ ID: septicmk
 LANG: C++
 TASK: 
 */
+/*
+ * modified by Yuan Lufeng in 20151113
+ * function:data format is changed to Collection.
+ */
 
 #include "MLalgorithm.h"
 #include <vector>

@@ -4,7 +4,7 @@ LANG: C++
 TASK: Core.cpp
 */
 
-#include "../MLalgorithm/MLalgorithm.h"
+//#include "../MLalgorithm/MLalgorithm.h"
 #include "Core.h"
 
 
@@ -45,6 +45,7 @@ inline std::vector<double> Core::partition(std::vector<std::string> origin, size
     return ret;
 }
 
+/*
 inline MLalgorithm* Core::merge(int rank, boost::mpi::communicator world, MLalgorithm* local_update){
         MLalgorithm* ptmp;
         MLalgorithm* update = local_update;
@@ -107,4 +108,4 @@ MLalgorithm* Core::mainLoop(int argc, char* argv[],
         ptr->finish(records, feat_dim);
     }
 }
-
+*/

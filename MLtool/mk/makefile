@@ -1,14 +1,14 @@
 CC      = mpic++
 CFLAGS  = -Wall -O
-INCLUDEFLAGS = -I ./Core -I ./Collection
-#LDFLAGS = /home/septicmk/lib/lib/libboost_serialization.so /home/septicmk/lib/lib/libboost_mpi.so
-OBJS    = ./Core/Core.o ./Collection/Flexible_vector.o ./Collection/Collection.o
+INCLUDEFLAGS = -I ./Core -I ./Kmeans -I ./MLalgorithm
+LDFLAGS = /home/septicmk/lib/lib/libboost_serialization.so /home/septicmk/lib/lib/libboost_mpi.so
+OBJS    = ./Core/Core.o ./MLalgorithm/MLalgorithm.o ./Kmeans/Kmeans.o
 TARGETS = main
 
 .PHONY:all 
 all:$(TARGETS)
 main: main.o $(OBJS)
-	$(CC) -o $@ $^ 
+	$(CC) -o $@ $^ $(LDFLAGS)
 %.o:%.cpp
 	$(CC) -o $@ -c $< $(CFLAGS) $(INCLUDEFLAGS)
 %.d:%.cpp

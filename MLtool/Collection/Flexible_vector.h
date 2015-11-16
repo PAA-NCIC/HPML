@@ -21,6 +21,7 @@ TASK: Flexible_vector.h
 #include <fstream>  
 #include <string>
 #include <iomanip>
+#include "Collection.h"
 
 struct node
 {
@@ -46,12 +47,18 @@ Type stringToNum(const std::string& str)
     return num;
 }
 
-class Flexible_vector{
+class Flexible_vector:public Collection{
     public:
         problem prob;
 	    ~Flexible_vector();
 
         problem Read_file_without_index(std::string filename);
+
+        //From Collection
+        void Load(std::string filename);
+        //Collection* partition(size_t number, size_t rank);
+        std::vector<double> operator [](size_t loc) const ;
+        size_t size();
 
         //test
         void output_problem(std::string filename,problem prb);

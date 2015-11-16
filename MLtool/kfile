@@ -1,0 +1,25 @@
+#CXX i?= g++
+CXX = mpicxx
+CFLAGS = -Wall -g -Wconversion -O3 -fPIC -leng -lmex -lmx
+#INCLUDEFLAGS = -I ./Core -I ./Collection
+vpath %.cpp Core
+vpath %.h Core
+vpath %.o Core
+vpath %.cpp Collection
+vpath %.h Collection
+vpath %.o Collection
+
+SHVER = 2
+OS = $(shell uname)
+
+
+main: main.cpp Core.o Flexible_vector.o
+	$(CXX) $(CFLAGS) main.cpp Core.o Flexible_vector.o -o main -lm
+Core.o: Core.cpp Core.h Flexible_vector.o 
+	$(CXX) $(CFLAGS) -c Core.cpp
+Flexible_vector.o: Flexible_vector.cpp Flexible_vector.h Collection.o
+	$(CXX) $(CFLAGS) -c Flexible_vector.cpp
+Collection.o: Collection.cpp Collection.h
+	$(CXX) $(CFLAGS) -c Collection.cpp
+clean:
+	rm -f *~ main 

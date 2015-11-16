@@ -1,18 +1,24 @@
 /*
-ID: septicmk
+ID: neo-white
 LANG: C++
 TASK:main.cpp
 */
-#include "MLalgorithm/MLalgorithm.h"
+#include "Collection/Flexible_vector.h"
 #include "Core/Core.h"
-#include "Kmeans/Kmeans.h"
+
 
 int main(int argc,char *argv[]){
     Core *p = new Core();
-    MLalgorithm *ptr = new Kmeans();
-    ptr->Init(3,5);
+    p->f_vector = new Flexible_vector();
 
-    p->mainLoop(argc, argv, ptr, 1e-7, 4);
+    std::string file_in = "pmlp_iris.csv";
+    std::string file_out = "test";
+
+    p->f_vector->Load(file_in);
+    //p->f_vector->output_problem(file_out,p->f_vector->prob);
+    Flexible_vector *f = (Flexible_vector *)p->f_vector;
+    f->output_problem(file_out,f->prob);
+
     return 0;
 }
 
