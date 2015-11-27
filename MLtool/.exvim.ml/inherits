@@ -1,0 +1,7 @@
+"MLalgorithm" -> "Kmeans_Lloyd"
+"MLalgorithm" -> "kmeans::Kmeans"
+"Collection" -> "Flexible_vector"
+"MLalgorithm" -> "DT"
+"MLalgorithm" -> "kmeans_lloyd::Kmeans_Lloyd"
+"MLalgorithm" -> "dt::DT"
+"MLalgorithm" -> "Kmeans"

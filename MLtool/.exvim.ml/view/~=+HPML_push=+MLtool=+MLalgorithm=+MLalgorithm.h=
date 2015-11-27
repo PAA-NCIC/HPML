@@ -1,37 +1,20 @@
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
-let s:cpo_save=&cpo
-set cpo&vim
-nnoremap <buffer> <silent> <NL> :call exproject#cursor_jump( '\C\[F\]', 'down' )
-nnoremap <buffer> <silent>  :call exproject#cursor_jump( '\C\[F\]', 'up' )
-nnoremap <buffer> <silent>  :call exproject#confirm_select('')
-nnoremap <buffer> <silent>   :call exproject#toggle_zoom()
-nnoremap <buffer> <silent> O :call exproject#newfolder()
-nnoremap <buffer> <silent> \r :EXProjectRefresh
-nnoremap <buffer> <silent> \R :EXProjectBuild
-nnoremap <buffer> <silent> o :call exproject#newfile()
-nnoremap <buffer> <silent> <C-Tab> :call EXProjectToNERDTree()
-nnoremap <buffer> <silent> <S-2-LeftMouse> :call exproject#confirm_select('shift')
-nnoremap <buffer> <silent> <S-CR> :call exproject#confirm_select('shift')
-nnoremap <buffer> <silent> <2-LeftMouse> :call exproject#confirm_select('')
-nnoremap <buffer> <silent> <F1> :call exproject#toggle_help()
-let &cpo=s:cpo_save
-unlet s:cpo_save
 setlocal autoindent
 setlocal backupcopy=
 setlocal balloonexpr=
 setlocal nobinary
 setlocal nobreakindent
 setlocal breakindentopt=
-setlocal bufhidden=hide
-setlocal nobuflisted
+setlocal bufhidden=
+setlocal buflisted
 setlocal buftype=
 setlocal cindent
 setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
 setlocal cinoptions=>s,e0,n0,f0,{0,}0,^0,:0,=s,l0,b0,g0,hs,ps,ts,is,+s,c3,C0,0,(0,us,U0,w0,W0,m0,j0,)20,*30
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,f://
 setlocal commentstring=/*%s*/
 setlocal complete=.,w,b,u,t,i
 setlocal completefunc=
@@ -39,15 +22,15 @@ setlocal nocopyindent
 setlocal cryptmethod=
 setlocal nocursorbind
 setlocal nocursorcolumn
-setlocal cursorline
+setlocal nocursorline
 setlocal define=
 setlocal dictionary=
 setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'exproject'
-setlocal filetype=exproject
+if &filetype != 'cpp'
+setlocal filetype=cpp
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -57,11 +40,11 @@ setlocal foldignore=#
 setlocal foldlevel=9999
 setlocal foldmarker={,}
 setlocal foldmethod=marker
-setlocal foldminlines=0
+setlocal foldminlines=1
 setlocal foldnestmax=20
-setlocal foldtext=exproject#foldtext()
+setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=tcq
+setlocal formatoptions=croql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
 setlocal iminsert=2
@@ -79,12 +62,12 @@ setlocal lispwords=
 setlocal nolist
 setlocal makeprg=
 setlocal matchpairs=(:),{:},[:]
-setlocal modeline
+setlocal nomodeline
 setlocal modifiable
 setlocal nrformats=
-setlocal nonumber
+setlocal number
 setlocal numberwidth=4
-setlocal omnifunc=
+setlocal omnifunc=ccomplete#Complete
 setlocal path=
 setlocal nopreserveindent
 setlocal nopreviewwindow
@@ -104,8 +87,8 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != 'exproject'
-setlocal syntax=exproject
+if &syntax != 'cpp'
+setlocal syntax=cpp
 endif
 setlocal tabstop=4
 setlocal tags=
@@ -113,15 +96,15 @@ setlocal textwidth=0
 setlocal thesaurus=
 setlocal noundofile
 setlocal undolevels=-123456
-setlocal winfixheight
-setlocal winfixwidth
+setlocal nowinfixheight
+setlocal nowinfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 2 - ((1 * winheight(0) + 31) / 63)
+let s:l = 19 - ((18 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-2
+19
 normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

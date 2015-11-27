@@ -1,5 +1,5 @@
 #!/bin/bash
-export DEST="./.exvim.fv"
+export DEST="./.exvim.ml"
 export TOOLS="/home/ylf/.vim/tools/"
 export IS_EXCLUDE=
 export FOLDERS=""

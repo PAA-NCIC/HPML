@@ -1,14 +1,19 @@
 CC      = mpic++
 CFLAGS  = -Wall -O
-INCLUDEFLAGS = -I ./Core -I ./Kmeans -I ./MLalgorithm -I ./DT
-LDFLAGS = /home/septicmk/lib/lib/libboost_serialization.so /home/septicmk/lib/lib/libboost_mpi.so
-OBJS    = ./Core/Core.o ./MLalgorithm/MLalgorithm.o ./Kmeans/Kmeans.o ./DT/DT.o
+INCLUDEFLAGS = -I ./Core -I ./Collection -I ./Kmeans -I ./MLalgorithm -I ./DT 
+#INCLUDEFLAGS = -I ./Core -I ./Collection -I ./Cluster -I ./MLalgorithm 
+#LDFLAGS = -L/home/ylf/system_tools/boost_1_59/lib -lboost_serialization -lboost_mpi
+LDFLAGS = -lboost_mpi #-lboost_serialization 
+#LDFLAGS = /home/ylf/system_tools/boost_1_59/lib/libboost_serialization.so /home/ylf/system_tools/boost_1_59/lib/libboost_mpi.so
+#LDFLAGS = /home/septicmk/lib/lib/libboost_serialization.so /home/septicmk/lib/lib/libboost_mpi.so
+#OBJS    = ./Core/Core.o ./Collection/Flexible_vector.o ./Collection/Collection.o ./MLalgorithm/MLalgorithm.o ./Cluster/Kmeans_Lloyd.o 
+OBJS    = ./Core/Core.o ./Collection/Flexible_vector.o ./Collection/Collection.o ./MLalgorithm/MLalgorithm.o ./Kmeans/Kmeans.o ./DT/DT.o
 TARGETS = main
 
 .PHONY:all 
 all:$(TARGETS)
-main: main.o $(OBJS)
-	$(CC) -o $@ $^ $(LDFLAGS)
+main: main_dt.o $(OBJS)
+	$(CC) -o  $@  $^ $(LDFLAGS)
 %.o:%.cpp
 	$(CC) -o $@ -c $< $(CFLAGS) $(INCLUDEFLAGS)
 %.d:%.cpp

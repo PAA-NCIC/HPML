@@ -50,7 +50,6 @@ namespace core{
             }
             return ret;
         }
-
     template<class T>
         T* Core<T>::merge(int rank, boost::mpi::communicator world, T* local_update){
             T* ptmp;
@@ -76,7 +75,56 @@ namespace core{
                 T *ptr,
                 double eps,
                 size_t feat_dim){
-            std::vector<std::string> data = ReadCSV("../data/car_nor.csv");
+            //mk
+            //std::vector<std::string> data = ReadCSV("../data/car_nor.csv");
+            //std::vector<std::string> data = ReadCSV("pmlp_iris.csv");
+            //std::cout<<"data size "<<data.size()<<std::endl;
+            //std::ofstream fd;
+            //fd.open("d.txt");
+            //for(size_t iii = 0;iii < data.size();iii++)
+            //{
+            //    if((iii%5 == 0)&&(iii!=0))
+            //        fd<<std::endl;
+            //    //std::stringstream s;
+            //    //std::string ss;
+            //    //s<<data_d[ii];
+            //    //s>>ss;
+            //    //data.push_back(ss);
+            //    fd<<data[iii]<<",";
+            //}
+            //yuan
+            std::vector<double> data_d = this->f_vector->FvtoVector();
+            //std::ofstream fd;
+            //fd.open("d.txt");
+            //for(size_t iii = 0;iii <= data_d.size();iii++)
+            //{
+            //    if((iii%5 == 0)&&(iii!=0))
+            //        fd<<std::endl;
+            //    //std::stringstream s;
+            //    //std::string ss;
+            //    //s<<data_d[ii];
+            //    //s>>ss;
+            //    //data.push_back(ss);
+            //    fd<<data_d[iii]<<",";
+            //}
+
+            std::vector<std::string> data;
+            //std::cout<<std::endl;
+            //std::ofstream ff;
+            //ff.open("o.txt");
+            for(size_t ii = 0;ii <= data_d.size();ii++)
+            {
+            //    if((ii%5 == 0)&&(ii!=0))
+            //        ff<<std::endl;
+                std::stringstream s;
+                std::string ss;
+                s<<data_d[ii];
+                s>>ss;
+                data.push_back(ss);
+            //    ff<<ss<<",";
+            }
+            //std::cout<<"Before pause"<<data_d.size()<<std::endl;
+            //pause();
             ptr->beginDataScan(partition(data,1,0,feat_dim), feat_dim);
             boost::mpi::environment env(argc, argv);
             boost::mpi::communicator world;
@@ -90,7 +138,7 @@ namespace core{
             bool done = 0;
             while(!done){
                 boost::mpi::broadcast(world, ptr, 0);
-                    
+                
                 //if(rank ==0 ) std::cout<<"flag"<<std::endl;
                 if(rank == 0){
                     std::cout << "[iteration] " << iter_num++ << std::endl;
@@ -100,7 +148,8 @@ namespace core{
                 //world.barrier();
                 T* global_update = merge(rank, world, local_update);
                 if(rank == 0){
-                    T *pafter = *ptr + *global_update;
+                    T *pafter = *ptr + *global_update;  //mk
+                    //T *pafter = *global_update;  //yuan
                     pafter->endDataScan();
 
                     done = pafter->isConverged(ptr, feat_dim, eps);
@@ -118,6 +167,4 @@ namespace core{
             }
             return ptr;
         }
-
-
 }

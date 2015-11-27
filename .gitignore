@@ -1,0 +1,7 @@
+MLtool/backup_mk/
+MLtool/backup_neo/
+
+*.exvim
+*.txt
+mai_neo.cpp
+makefile

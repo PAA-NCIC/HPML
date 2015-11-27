@@ -1,5 +1,5 @@
 #!/bin/bash
-export DEST="./.exvim.fv"
+export DEST="./.exvim.ml"
 export TOOLS="/home/ylf/.vim/tools/"
 export CTAGS_CMD="ctags"
 export OPTIONS="--fields=+iaS --extra=+q"

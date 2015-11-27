@@ -1,5 +1,5 @@
 #!/bin/bash
-export DEST="./.exvim.fv"
+export DEST="./.exvim.ml"
 export TOOLS="/home/ylf/.vim/tools/"
 export TMP="${DEST}/_inherits"
 export TARGET="${DEST}/inherits"

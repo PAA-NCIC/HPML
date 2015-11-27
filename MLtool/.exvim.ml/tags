@@ -1,0 +1,643 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+C	./backup_neo/kmeans-pmlp.h	/^	double C;	\/* for C_SVC, EPSILON_SVR and NU_SVR *\/$/;"	m	struct:svm_parameter	access:public
+CC	./backup_neo/makefile	/^CC      = mpic++$/;"	m
+CC	./makefile	/^CC      = mpic++$/;"	m
+CFLAGS	./backup_neo/makefile	/^CFLAGS  = -Wall -O$/;"	m
+CFLAGS	./makefile	/^CFLAGS  = -Wall -O$/;"	m
+CLASSIFICATION	./backup_neo/kmeans-pmlp.h	/^enum { CLUSTER, CLASSIFICATION };	\/* save_type *\/$/;"	e	enum:__anon4
+CLUSTER	./backup_neo/kmeans-pmlp.h	/^enum { CLUSTER, CLASSIFICATION };	\/* save_type *\/$/;"	e	enum:__anon4
+Collection	./Collection/Collection.h	/^class Collection{$/;"	c
+Collection::Load	./Collection/Collection.h	/^        virtual void Load(std::string filename)=0;$/;"	p	class:Collection	access:public	signature:(std::string filename)
+Collection::operator []	./Collection/Collection.h	/^        virtual std::vector<double> operator [](size_t loc) const =0;$/;"	p	class:Collection	access:public	signature:(size_t loc) const
+Collection::serialize	./Collection/Collection.h	/^        void serialize (Archive &ar, const unsigned int version){$/;"	f	class:Collection	access:private	signature:(Archive &ar, const unsigned int version)
+Collection::size	./Collection/Collection.h	/^        virtual size_t size()=0;$/;"	p	class:Collection	access:public	signature:()
+Core	./Core/Core.h	/^        class Core{$/;"	c	namespace:core
+D	./DT/DT.h	/^            std::vector<int> D;$/;"	m	class:dt::Node	access:public
+DT	./DT/DT.h	/^    class DT:public MLalgorithm<DT>{$/;"	c	namespace:dt	inherits:MLalgorithm
+EM	./backup_neo/kmeans-pmlp.h	/^enum { LLOYD, PAM_FIRST_MEDOIDS, PAM_SECOND_MEDOIDS, EM };	\/* count_type *\/$/;"	e	enum:__anon3
+Flexible_vector	./Collection/Flexible_vector.h	/^class Flexible_vector:public Collection{$/;"	c	inherits:Collection
+Flexible_vector::FvtoVector	./Collection/Flexible_vector.cpp	/^std::vector<double> Flexible_vector::FvtoVector() const$/;"	f	class:Flexible_vector	signature:() const
+Flexible_vector::FvtoVector	./Collection/Flexible_vector.h	/^        std::vector<double> FvtoVector() const ;$/;"	p	class:Flexible_vector	access:public	signature:() const
+Flexible_vector::Load	./Collection/Flexible_vector.cpp	/^void Flexible_vector::Load(std::string filename)$/;"	f	class:Flexible_vector	signature:(std::string filename)
+Flexible_vector::Load	./Collection/Flexible_vector.h	/^        void Load(std::string filename);$/;"	p	class:Flexible_vector	access:public	signature:(std::string filename)
+Flexible_vector::Read_file_without_index	./Collection/Flexible_vector.cpp	/^problem Flexible_vector::Read_file_without_index(std::string filename)$/;"	f	class:Flexible_vector	signature:(std::string filename)
+Flexible_vector::Read_file_without_index	./Collection/Flexible_vector.h	/^        problem Read_file_without_index(std::string filename);$/;"	p	class:Flexible_vector	access:public	signature:(std::string filename)
+Flexible_vector::add	./Collection/Flexible_vector.cpp	/^void Flexible_vector::add(std::vector<node> src, size_t loc)$/;"	f	class:Flexible_vector	signature:(std::vector<node> src, size_t loc)
+Flexible_vector::add	./Collection/Flexible_vector.h	/^        void add(std::vector<node> src, size_t loc);   \/\/add src to the loc-th sample of prob in fvkl $/;"	p	class:Flexible_vector	access:public	signature:(std::vector<node> src, size_t loc)
+Flexible_vector::get_value_without_label	./Collection/Flexible_vector.cpp	/^std::vector<node> Flexible_vector::get_value_without_label(size_t loc)$/;"	f	class:Flexible_vector	signature:(size_t loc)
+Flexible_vector::get_value_without_label	./Collection/Flexible_vector.h	/^        std::vector<node> get_value_without_label(size_t loc);$/;"	p	class:Flexible_vector	access:public	signature:(size_t loc)
+Flexible_vector::init	./Collection/Flexible_vector.cpp	/^void Flexible_vector::init()$/;"	f	class:Flexible_vector	signature:()
+Flexible_vector::init	./Collection/Flexible_vector.cpp	/^void Flexible_vector::init(size_t l, size_t max_feature)$/;"	f	class:Flexible_vector	signature:(size_t l, size_t max_feature)
+Flexible_vector::init	./Collection/Flexible_vector.h	/^        void init();$/;"	p	class:Flexible_vector	access:public	signature:()
+Flexible_vector::init	./Collection/Flexible_vector.h	/^        void init(size_t l, size_t max_feature);$/;"	p	class:Flexible_vector	access:public	signature:(size_t l, size_t max_feature)
+Flexible_vector::insert_end	./Collection/Flexible_vector.cpp	/^void Flexible_vector::insert_end(Flexible_vector src, size_t loc)$/;"	f	class:Flexible_vector	signature:(Flexible_vector src, size_t loc)
+Flexible_vector::insert_end	./Collection/Flexible_vector.h	/^        void insert_end(Flexible_vector src, size_t loc);   \/\/insert the loc-th sample of src to the end of prob$/;"	p	class:Flexible_vector	access:public	signature:(Flexible_vector src, size_t loc)
+Flexible_vector::main_vector	./Collection/Flexible_vector.h	/^        void main_vector(int argc,char* argv[]);$/;"	p	class:Flexible_vector	access:public	signature:(int argc,char* argv[])
+Flexible_vector::operator []	./Collection/Flexible_vector.cpp	/^std::vector<double> Flexible_vector::operator [](size_t loc) const $/;"	f	class:Flexible_vector	signature:(size_t loc) const
+Flexible_vector::operator []	./Collection/Flexible_vector.h	/^        std::vector<double> operator [](size_t loc) const ;$/;"	p	class:Flexible_vector	access:public	signature:(size_t loc) const
+Flexible_vector::output_problem	./Collection/Flexible_vector.cpp	/^void Flexible_vector::output_problem(std::string filename, problem prob)$/;"	f	class:Flexible_vector	signature:(std::string filename, problem prob)
+Flexible_vector::output_problem	./Collection/Flexible_vector.h	/^        void output_problem(std::string filename,problem prb);$/;"	p	class:Flexible_vector	access:public	signature:(std::string filename,problem prb)
+Flexible_vector::partition	./Collection/Flexible_vector.cpp	/^Flexible_vector* Flexible_vector::partition(Flexible_vector *origin, size_t number, size_t loc, size_t feat_dim)$/;"	f	class:Flexible_vector	signature:(Flexible_vector *origin, size_t number, size_t loc, size_t feat_dim)
+Flexible_vector::partition	./Collection/Flexible_vector.h	/^        Flexible_vector* partition(Flexible_vector *origin, size_t number, size_t loc, size_t feat_dim);$/;"	p	class:Flexible_vector	access:public	signature:(Flexible_vector *origin, size_t number, size_t loc, size_t feat_dim)
+Flexible_vector::print_fv	./Collection/Flexible_vector.cpp	/^void Flexible_vector::print_fv()$/;"	f	class:Flexible_vector	signature:()
+Flexible_vector::print_fv	./Collection/Flexible_vector.h	/^        void print_fv();$/;"	p	class:Flexible_vector	access:public	signature:()
+Flexible_vector::prob	./Collection/Flexible_vector.h	/^        problem prob;$/;"	m	class:Flexible_vector	access:public
+Flexible_vector::serialize	./Collection/Flexible_vector.h	/^            void serialize (Archive &ar, const unsigned int version){$/;"	f	class:Flexible_vector	access:private	signature:(Archive &ar, const unsigned int version)
+Flexible_vector::size	./Collection/Flexible_vector.cpp	/^inline size_t Flexible_vector::size()$/;"	f	class:Flexible_vector	signature:()
+Flexible_vector::size	./Collection/Flexible_vector.h	/^        size_t size();$/;"	p	class:Flexible_vector	access:public	signature:()
+FvtoVector	./Collection/Flexible_vector.cpp	/^std::vector<double> Flexible_vector::FvtoVector() const$/;"	f	class:Flexible_vector	signature:() const
+FvtoVector	./Collection/Flexible_vector.h	/^        std::vector<double> FvtoVector() const ;$/;"	p	class:Flexible_vector	access:public	signature:() const
+INCLUDEFLAGS	./backup_neo/makefile	/^INCLUDEFLAGS = -I .\/Core -I .\/Collection -I .\/Cluster -I .\/MLalgorithm $/;"	m
+INCLUDEFLAGS	./makefile	/^INCLUDEFLAGS = -I .\/Core -I .\/Collection -I .\/Kmeans -I .\/MLalgorithm -I .\/DT $/;"	m
+INF	./backup_neo/kmeans.cpp	40;"	d	file:
+KMEANS_PMLP_VERSION	./backup_neo/kmeans-pmlp.h	4;"	d
+KMEANS_PP	./backup_neo/kmeans-pmlp.h	/^enum { RANDOM, KMEANS_PP, KMEANS_SS, USER_CERTAIN };	\/* initial_type *\/$/;"	e	enum:__anon2
+KMEANS_SS	./backup_neo/kmeans-pmlp.h	/^enum { RANDOM, KMEANS_PP, KMEANS_SS, USER_CERTAIN };	\/* initial_type *\/$/;"	e	enum:__anon2
+Kmeans	./Kmeans/Kmeans.h	/^    class Kmeans:public MLalgorithm<Kmeans>{$/;"	c	namespace:kmeans	inherits:MLalgorithm
+Kmeans_Lloyd	./Cluster/Kmeans_Lloyd.h	/^class Kmeans_Lloyd:public MLalgorithm<Kmeans_Lloyd>{$/;"	c	namespace:kmeans_lloyd	inherits:MLalgorithm
+LDFLAGS	./backup_neo/makefile	/^LDFLAGS = -lboost_mpi #-lboost_serialization $/;"	m
+LDFLAGS	./makefile	/^LDFLAGS = -lboost_mpi #-lboost_serialization $/;"	m
+LLOYD	./backup_neo/kmeans-pmlp.h	/^enum { LLOYD, PAM_FIRST_MEDOIDS, PAM_SECOND_MEDOIDS, EM };	\/* count_type *\/$/;"	e	enum:__anon3
+Load	./Collection/Collection.h	/^        virtual void Load(std::string filename)=0;$/;"	p	class:Collection	access:public	signature:(std::string filename)
+Load	./Collection/Flexible_vector.cpp	/^void Flexible_vector::Load(std::string filename)$/;"	f	class:Flexible_vector	signature:(std::string filename)
+Load	./Collection/Flexible_vector.h	/^        void Load(std::string filename);$/;"	p	class:Flexible_vector	access:public	signature:(std::string filename)
+MLalgorithm	./MLalgorithm/MLalgorithm.h	/^class MLalgorithm{$/;"	c
+MLalgorithm::beginDataScan	./MLalgorithm/MLalgorithm.h	/^        void beginDataScan(std::vector<double> records, size_t feat_dim){$/;"	f	class:MLalgorithm	access:public	signature:(std::vector<double> records, size_t feat_dim)
+MLalgorithm::cast	./MLalgorithm/MLalgorithm.h	/^        Derived* cast(){$/;"	f	class:MLalgorithm	access:private	signature:()
+MLalgorithm::endDataScan	./MLalgorithm/MLalgorithm.h	/^        void endDataScan(){$/;"	f	class:MLalgorithm	access:public	signature:()
+MLalgorithm::finish	./MLalgorithm/MLalgorithm.h	/^        void finish(std::vector<double> records, size_t feat_dim){$/;"	f	class:MLalgorithm	access:public	signature:(std::vector<double> records, size_t feat_dim)
+MLalgorithm::isConverged	./MLalgorithm/MLalgorithm.h	/^        bool isConverged(Derived* rhs, size_t feat_dim, double eps){$/;"	f	class:MLalgorithm	access:public	signature:(Derived* rhs, size_t feat_dim, double eps)
+MLalgorithm::operator +	./MLalgorithm/MLalgorithm.h	/^        Derived* operator + (Derived &rhs){$/;"	f	class:MLalgorithm	access:public	signature:(Derived &rhs)
+MLalgorithm::processRecord	./MLalgorithm/MLalgorithm.h	/^        Derived* processRecord (std::vector<double> records, size_t feat_dim){$/;"	f	class:MLalgorithm	access:public	signature:(std::vector<double> records, size_t feat_dim)
+MLalgorithm::serialize	./MLalgorithm/MLalgorithm.h	/^            void serialize (Archive &ar, const unsigned int version){$/;"	f	class:MLalgorithm	access:private	signature:(Archive &ar, const unsigned int version)
+MPI_CH	./backup_neo/kmeans-pmlp.h	/^enum { SEQ,  MPI_CH };	\/* parallel_type *\/$/;"	e	enum:__anon1
+Malloc	./backup_neo/kmeans-fit.c	10;"	d	file:
+Malloc	./backup_neo/kmeans.cpp	42;"	d	file:
+Matrix	./DT/DT.h	/^    class Matrix{$/;"	c	namespace:dt
+Matrix	./Kmeans/Kmeans.h	/^    class Matrix{$/;"	c	namespace:kmeans
+Node	./DT/DT.h	/^    class Node{$/;"	c	namespace:dt
+OBJS	./backup_neo/makefile	/^OBJS    = .\/Core\/Core.o .\/Collection\/Flexible_vector.o .\/Collection\/Collection.o .\/MLalgorithm\/MLalgorithm.o .\/Cluster\/Kmeans_Lloyd.o $/;"	m
+OBJS	./makefile	/^OBJS    = .\/Core\/Core.o .\/Collection\/Flexible_vector.o .\/Collection\/Collection.o .\/MLalgorithm\/MLalgorithm.o .\/Kmeans\/Kmeans.o .\/DT\/DT.o$/;"	m
+PAM_FIRST_MEDOIDS	./backup_neo/kmeans-pmlp.h	/^enum { LLOYD, PAM_FIRST_MEDOIDS, PAM_SECOND_MEDOIDS, EM };	\/* count_type *\/$/;"	e	enum:__anon3
+PAM_SECOND_MEDOIDS	./backup_neo/kmeans-pmlp.h	/^enum { LLOYD, PAM_FIRST_MEDOIDS, PAM_SECOND_MEDOIDS, EM };	\/* count_type *\/$/;"	e	enum:__anon3
+Qfloat	./backup_neo/kmeans.cpp	/^typedef float Qfloat;$/;"	t	file:
+RANDOM	./backup_neo/kmeans-pmlp.h	/^enum { RANDOM, KMEANS_PP, KMEANS_SS, USER_CERTAIN };	\/* initial_type *\/$/;"	e	enum:__anon2
+Random	./Core/Core.h	/^    inline int Random(int mod){$/;"	f	namespace:core	signature:(int mod)
+ReadCSV	./Core/Core.h	/^                std::vector<std::string> ReadCSV(std::string pwd);$/;"	p	class:core::Core	access:public	signature:(std::string pwd)
+ReadCSV	./Core/Core_impl.h	/^        inline std::vector<std::string> Core<T>::ReadCSV(std::string pwd){$/;"	f	class:core::Core	signature:(std::string pwd)
+ReadCSV	./backup_mk/Core_impl.h	/^        inline std::vector<std::string> Core<T>::ReadCSV(std::string pwd){$/;"	f	class:core::Core	signature:(std::string pwd)
+ReadCSV	./backup_neo/Core_impl.h	/^        inline std::vector<std::string> Core<T>::ReadCSV(std::string pwd){$/;"	f	class:core::Core	signature:(std::string pwd)
+Read_file_without_index	./Collection/Flexible_vector.cpp	/^problem Flexible_vector::Read_file_without_index(std::string filename)$/;"	f	class:Flexible_vector	signature:(std::string filename)
+Read_file_without_index	./Collection/Flexible_vector.h	/^        problem Read_file_without_index(std::string filename);$/;"	p	class:Flexible_vector	access:public	signature:(std::string filename)
+Round	./Core/Core.h	/^    inline int Round(double r){  $/;"	f	namespace:core	signature:(double r)
+SEQ	./backup_neo/kmeans-pmlp.h	/^enum { SEQ,  MPI_CH };	\/* parallel_type *\/$/;"	e	enum:__anon1
+SV	./backup_neo/kmeans-pmlp.h	/^	struct svm_node **SV;		\/* SVs (SV[l]) *\/$/;"	m	struct:svm_model	typeref:struct:svm_model::svm_node	access:public
+Solver	./backup_neo/kmeans.cpp	/^	Solver() {};$/;"	f	class:Solver	access:public	signature:()
+Solver	./backup_neo/kmeans.cpp	/^class Solver {$/;"	c	file:
+Solver::Solver	./backup_neo/kmeans.cpp	/^	Solver() {};$/;"	f	class:Solver	access:public	signature:()
+Solver::init_kmeans_plusplus	./backup_neo/kmeans.cpp	/^    void init_kmeans_plusplus(cluster_problem *problem,kmeans_parameter *param,int *center_init);$/;"	p	class:Solver	file:	access:protected	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init)
+Solver::init_kmeans_plusplus	./backup_neo/kmeans.cpp	/^void Solver::init_kmeans_plusplus(cluster_problem *problem,kmeans_parameter *param,int *center_init)$/;"	f	class:Solver	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init)
+Solver::init_random	./backup_neo/kmeans.cpp	/^    int * init_random(int length, int random_seed);$/;"	p	class:Solver	file:	access:protected	signature:(int length, int random_seed)
+Solver::init_random	./backup_neo/kmeans.cpp	/^int * Solver::init_random(int length, int random_seed)$/;"	f	class:Solver	signature:(int length, int random_seed)
+Solver::init_user_certain	./backup_neo/kmeans.cpp	/^    int * init_user_certain(int l);$/;"	p	class:Solver	file:	access:protected	signature:(int l)
+Solver::init_user_certain	./backup_neo/kmeans.cpp	/^int * Solver::init_user_certain(int length)$/;"	f	class:Solver	signature:(int length)
+Solver::kmeans_Lloyd	./backup_neo/kmeans.cpp	/^    void kmeans_Lloyd(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model);$/;"	p	class:Solver	file:	access:protected	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)
+Solver::kmeans_Lloyd	./backup_neo/kmeans.cpp	/^void Solver::kmeans_Lloyd(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)$/;"	f	class:Solver	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)
+Solver::kmeans_Lloyd_mpi	./backup_neo/kmeans.cpp	/^    void kmeans_Lloyd_mpi(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model);$/;"	p	class:Solver	file:	access:protected	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)
+Solver::kmeans_Lloyd_mpi	./backup_neo/kmeans.cpp	/^void Solver::kmeans_Lloyd_mpi(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)$/;"	f	class:Solver	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)
+Solver::kmeans_fit_mpi	./backup_neo/kmeans.cpp	/^    kmeans_model *kmeans_fit_mpi(cluster_problem *prob, kmeans_parameter *param);$/;"	p	class:Solver	file:	access:public	signature:(cluster_problem *prob, kmeans_parameter *param)
+Solver::kmeans_fit_mpi	./backup_neo/kmeans.cpp	/^kmeans_model *Solver::kmeans_fit_mpi(cluster_problem *prob, kmeans_parameter *param)$/;"	f	class:Solver	signature:(cluster_problem *prob, kmeans_parameter *param)
+Solver::kmeans_fit_seq	./backup_neo/kmeans.cpp	/^    kmeans_model *kmeans_fit_seq(cluster_problem *prob, kmeans_parameter *param);$/;"	p	class:Solver	file:	access:public	signature:(cluster_problem *prob, kmeans_parameter *param)
+Solver::kmeans_fit_seq	./backup_neo/kmeans.cpp	/^kmeans_model *Solver::kmeans_fit_seq(cluster_problem *prob, kmeans_parameter *param)$/;"	f	class:Solver	signature:(cluster_problem *prob, kmeans_parameter *param)
+Solver::kmedoids_pam_first_medoids	./backup_neo/kmeans.cpp	/^    void kmedoids_pam_first_medoids(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model);$/;"	p	class:Solver	file:	access:protected	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)
+Solver::kmedoids_pam_first_medoids	./backup_neo/kmeans.cpp	/^void Solver::kmedoids_pam_first_medoids(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)$/;"	f	class:Solver	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)
+Solver::~Solver	./backup_neo/kmeans.cpp	/^	virtual ~Solver() {};$/;"	f	class:Solver	access:public	signature:()
+TARGETS	./backup_neo/makefile	/^TARGETS = main$/;"	m
+TARGETS	./makefile	/^TARGETS = main$/;"	m
+TAU	./backup_neo/kmeans.cpp	41;"	d	file:
+Trim	./Core/Core.h	/^                std::string Trim (std::string &str);$/;"	p	class:core::Core	access:public	signature:(std::string &str)
+Trim	./Core/Core_impl.h	/^        std::string Core<T>::Trim (std::string &str){$/;"	f	class:core::Core	signature:(std::string &str)
+Trim	./backup_mk/Core_impl.h	/^        std::string Core<T>::Trim (std::string &str){$/;"	f	class:core::Core	signature:(std::string &str)
+Trim	./backup_neo/Core_impl.h	/^        std::string Core<T>::Trim (std::string &str){$/;"	f	class:core::Core	signature:(std::string &str)
+USER_CERTAIN	./backup_neo/kmeans-pmlp.h	/^enum { RANDOM, KMEANS_PP, KMEANS_SS, USER_CERTAIN };	\/* initial_type *\/$/;"	e	enum:__anon2
+_KMEANS_PMLP_H	./backup_neo/kmeans-pmlp.h	2;"	d
+__COLLECTION	./Collection/Collection.h	7;"	d
+__CORE	./Core/Core.h	7;"	d
+__DT	./DT/DT.h	8;"	d
+__FLEXIBLE_VECTOR	./Collection/Flexible_vector.h	7;"	d
+__KMEANS	./Kmeans/Kmeans.h	8;"	d
+__KMEANS_LLOYD	./Cluster/Kmeans_Lloyd.h	8;"	d
+__MLALGORITHM	./MLalgorithm/MLalgorithm.h	7;"	d
+add	./Collection/Flexible_vector.cpp	/^void Flexible_vector::add(std::vector<node> src, size_t loc)$/;"	f	class:Flexible_vector	signature:(std::vector<node> src, size_t loc)
+add	./Collection/Flexible_vector.h	/^        void add(std::vector<node> src, size_t loc);   \/\/add src to the loc-th sample of prob in fvkl $/;"	p	class:Flexible_vector	access:public	signature:(std::vector<node> src, size_t loc)
+add	./DT/DT.h	/^            void add(size_t i, size_t j, int addon){$/;"	f	class:dt::Matrix	access:public	signature:(size_t i, size_t j, int addon)
+add	./Kmeans/Kmeans.cpp	/^    void Matrix::add (std::vector<double> record, size_t i){$/;"	f	class:kmeans::Matrix	signature:(std::vector<double> record, size_t i)
+add	./Kmeans/Kmeans.h	/^            void add(std::vector<double> record, size_t i);$/;"	p	class:kmeans::Matrix	access:public	signature:(std::vector<double> record, size_t i)
+add_sample	./backup_neo/kmeans.cpp	/^void add_sample(cluster_node *px,cluster_node *py)$/;"	f	signature:(cluster_node *px,cluster_node *py)
+average_sample	./backup_neo/kmeans.cpp	/^void average_sample(cluster_node *px,int n)$/;"	f	signature:(cluster_node *px,int n)
+beginDataScan	./Cluster/Kmeans_Lloyd.cpp	/^    void Kmeans_Lloyd::beginDataScan(Flexible_vector *records, size_t n_cluster)$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:(Flexible_vector *records, size_t n_cluster)
+beginDataScan	./Cluster/Kmeans_Lloyd.h	/^        void beginDataScan(Flexible_vector *records, size_t n_cluster);$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:(Flexible_vector *records, size_t n_cluster)
+beginDataScan	./DT/DT.cpp	/^    void DT::beginDataScan(std::vector<double> records, size_t feat_dim){$/;"	f	class:dt::DT	signature:(std::vector<double> records, size_t feat_dim)
+beginDataScan	./DT/DT.h	/^            void beginDataScan(std::vector<double> records, size_t feat_dim);$/;"	p	class:dt::DT	access:public	signature:(std::vector<double> records, size_t feat_dim)
+beginDataScan	./Kmeans/Kmeans.cpp	/^    void Kmeans::beginDataScan(std::vector<double> records, size_t feat_dim){$/;"	f	class:kmeans::Kmeans	signature:(std::vector<double> records, size_t feat_dim)
+beginDataScan	./Kmeans/Kmeans.h	/^            void beginDataScan(std::vector<double> records, size_t feat_dim);$/;"	p	class:kmeans::Kmeans	access:public	signature:(std::vector<double> records, size_t feat_dim)
+beginDataScan	./MLalgorithm/MLalgorithm.h	/^        void beginDataScan(std::vector<double> records, size_t feat_dim){$/;"	f	class:MLalgorithm	access:public	signature:(std::vector<double> records, size_t feat_dim)
+best_n_iter	./backup_neo/kmeans-pmlp.h	/^     int best_n_iter;$/;"	m	struct:kmeans_parameter	access:public
+cache_size	./backup_neo/kmeans-pmlp.h	/^	double cache_size; \/* in MB *\/$/;"	m	struct:svm_parameter	access:public
+cast	./MLalgorithm/MLalgorithm.h	/^        Derived* cast(){$/;"	f	class:MLalgorithm	access:private	signature:()
+center_count	./backup_neo/kmeans-pmlp.h	/^	cluster_node **center_count;		\/* count centers (center[l]) for kmeans*\/$/;"	m	struct:kmeans_model	access:public
+center_init	./backup_neo/kmeans-pmlp.h	/^	int *center_init;		\/* initial centers (center[l]) *\/$/;"	m	struct:kmeans_model	access:public
+center_medoids	./backup_neo/kmeans-pmlp.h	/^	int *center_medoids;		\/* centers (center[l]) for kmedoids*\/$/;"	m	struct:kmeans_model	access:public
+centroid	./backup_neo/kmeans-pmlp.h	/^ 	 double centroid;  \/\/array with shape (k, n_features). Centroids found at the last iteration of k-means.$/;"	m	struct:kmeans_parameter	access:public
+check	./DT/DT.h	/^            void check(){$/;"	f	class:dt::DT	access:public	signature:()
+check	./DT/DT.h	/^            void check(){$/;"	f	class:dt::Node	access:public	signature:()
+check_match	./backup_neo/kmeans.cpp	/^bool check_match(int *a,int *b,int length)$/;"	f	signature:(int *a,int *b,int length)
+clone	./backup_neo/kmeans.cpp	/^template <class S, class T> static inline void clone(T*& dst, S* src, int n)$/;"	f	file:	signature:(T*& dst, S* src, int n)
+cls_number	./DT/DT.h	/^            size_t cls_number;$/;"	m	class:dt::DT	access:public
+cluster_node	./backup_neo/kmeans-pmlp.h	/^struct cluster_node$/;"	s
+cluster_node::index	./backup_neo/kmeans-pmlp.h	/^	int index;$/;"	m	struct:cluster_node	access:public
+cluster_node::value	./backup_neo/kmeans-pmlp.h	/^	double value;$/;"	m	struct:cluster_node	access:public
+cluster_problem	./backup_neo/kmeans-pmlp.h	/^struct cluster_problem$/;"	s
+cluster_problem::l	./backup_neo/kmeans-pmlp.h	/^	int l;$/;"	m	struct:cluster_problem	access:public
+cluster_problem::x	./backup_neo/kmeans-pmlp.h	/^	struct cluster_node **x;$/;"	m	struct:cluster_problem	typeref:struct:cluster_problem::cluster_node	access:public
+cluster_problem::y	./backup_neo/kmeans-pmlp.h	/^	double *y;$/;"	m	struct:cluster_problem	access:public
+clustering_Lloyd	./backup_neo/kmeans.cpp	/^void clustering_Lloyd(cluster_problem *problem,kmeans_model *model,cluster_node **cur_center)$/;"	f	signature:(cluster_problem *problem,kmeans_model *model,cluster_node **cur_center)
+clustering_Lloyd_mpi	./backup_neo/kmeans.cpp	/^void clustering_Lloyd_mpi(cluster_problem *problem,kmeans_model *model,cluster_node **cur_center)$/;"	f	signature:(cluster_problem *problem,kmeans_model *model,cluster_node **cur_center)
+clustering_first_medoids	./backup_neo/kmeans.cpp	/^void clustering_first_medoids(cluster_problem *problem,kmeans_model *model,int *medoids)$/;"	f	signature:(cluster_problem *problem,kmeans_model *model,int *medoids)
+clustering_new_center	./backup_neo/kmeans.cpp	/^void clustering_new_center(cluster_problem *problem,kmeans_model *model,cluster_node **cur_center)$/;"	f	signature:(cluster_problem *problem,kmeans_model *model,cluster_node **cur_center)
+coef0	./backup_neo/kmeans-pmlp.h	/^	double coef0;	\/* for poly\/sigmoid *\/$/;"	m	struct:svm_parameter	access:public
+copy_sample	./backup_neo/kmeans.cpp	/^void copy_sample(cluster_node *dst,cluster_node *src)$/;"	f	signature:(cluster_node *dst,cluster_node *src)
+copy_x	./backup_neo/kmeans-pmlp.h	/^    double copy_x;$/;"	m	struct:kmeans_parameter	access:public
+core	./Core/Core.h	/^namespace core{$/;"	n
+core	./Core/Core_impl.h	/^namespace core{$/;"	n
+core	./backup_mk/Core_impl.h	/^namespace core{$/;"	n
+core	./backup_neo/Core_impl.h	/^namespace core{$/;"	n
+core::Core	./Core/Core.h	/^        class Core{$/;"	c	namespace:core
+core::Core::ReadCSV	./Core/Core.h	/^                std::vector<std::string> ReadCSV(std::string pwd);$/;"	p	class:core::Core	access:public	signature:(std::string pwd)
+core::Core::ReadCSV	./Core/Core_impl.h	/^        inline std::vector<std::string> Core<T>::ReadCSV(std::string pwd){$/;"	f	class:core::Core	signature:(std::string pwd)
+core::Core::ReadCSV	./backup_mk/Core_impl.h	/^        inline std::vector<std::string> Core<T>::ReadCSV(std::string pwd){$/;"	f	class:core::Core	signature:(std::string pwd)
+core::Core::ReadCSV	./backup_neo/Core_impl.h	/^        inline std::vector<std::string> Core<T>::ReadCSV(std::string pwd){$/;"	f	class:core::Core	signature:(std::string pwd)
+core::Core::Trim	./Core/Core.h	/^                std::string Trim (std::string &str);$/;"	p	class:core::Core	access:public	signature:(std::string &str)
+core::Core::Trim	./Core/Core_impl.h	/^        std::string Core<T>::Trim (std::string &str){$/;"	f	class:core::Core	signature:(std::string &str)
+core::Core::Trim	./backup_mk/Core_impl.h	/^        std::string Core<T>::Trim (std::string &str){$/;"	f	class:core::Core	signature:(std::string &str)
+core::Core::Trim	./backup_neo/Core_impl.h	/^        std::string Core<T>::Trim (std::string &str){$/;"	f	class:core::Core	signature:(std::string &str)
+core::Core::f_vector	./Core/Core.h	/^                Flexible_vector *f_vector;$/;"	m	class:core::Core	access:public
+core::Core::mainLoop	./Core/Core.h	/^                T* mainLoop(int argc, char* argv[], $/;"	p	class:core::Core	access:public	signature:(int argc, char* argv[], T* ptr, double eps, size_t feat_dim)
+core::Core::mainLoop	./Core/Core_impl.h	/^        T* Core<T>::mainLoop(int argc, char* argv[], $/;"	f	class:core::Core	signature:(int argc, char* argv[], T *ptr, double eps, size_t feat_dim)
+core::Core::mainLoop	./backup_mk/Core_impl.h	/^        T* Core<T>::mainLoop(int argc, char* argv[], $/;"	f	class:core::Core	signature:(int argc, char* argv[], T *ptr, double eps, size_t feat_dim)
+core::Core::mainLoop	./backup_neo/Core_impl.h	/^        T* Core<T>::mainLoop(int argc, char* argv[], $/;"	f	class:core::Core	signature:(int argc, char* argv[], T *ptr, double eps, size_t feat_dim)
+core::Core::merge	./Core/Core.h	/^                T* merge(int rank, boost::mpi::communicator world, T* local_update);$/;"	p	class:core::Core	access:public	signature:(int rank, boost::mpi::communicator world, T* local_update)
+core::Core::merge	./Core/Core_impl.h	/^        T* Core<T>::merge(int rank, boost::mpi::communicator world, T* local_update){$/;"	f	class:core::Core	signature:(int rank, boost::mpi::communicator world, T* local_update)
+core::Core::merge	./backup_mk/Core_impl.h	/^        T* Core<T>::merge(int rank, boost::mpi::communicator world, T* local_update){$/;"	f	class:core::Core	signature:(int rank, boost::mpi::communicator world, T* local_update)
+core::Core::merge	./backup_neo/Core_impl.h	/^        T* Core<T>::merge(int rank, boost::mpi::communicator world, T* local_update){$/;"	f	class:core::Core	signature:(int rank, boost::mpi::communicator world, T* local_update)
+core::Core::partition	./Core/Core.h	/^                std::vector<double> partition(std::vector<std::string> origin,$/;"	p	class:core::Core	access:public	signature:(std::vector<std::string> origin, size_t number, size_t loc, size_t feat_dim)
+core::Core::partition	./Core/Core_impl.h	/^        inline std::vector<double> Core<T>::partition(std::vector<std::string> origin, size_t number, size_t loc, size_t feat_dim){$/;"	f	class:core::Core	signature:(std::vector<std::string> origin, size_t number, size_t loc, size_t feat_dim)
+core::Core::partition	./backup_mk/Core_impl.h	/^        inline std::vector<double> Core<T>::partition(std::vector<std::string> origin, size_t number, size_t loc, size_t feat_dim){$/;"	f	class:core::Core	signature:(std::vector<std::string> origin, size_t number, size_t loc, size_t feat_dim)
+core::Core::praser	./Core/Core.h	/^                double praser(std::vector<std::string> data, int feat_dim, size_t i, size_t j);$/;"	p	class:core::Core	access:public	signature:(std::vector<std::string> data, int feat_dim, size_t i, size_t j)
+core::Core::praser	./Core/Core_impl.h	/^        inline double Core<T>::praser(std::vector<std::string> data, int feat_dim, size_t i, size_t j){$/;"	f	class:core::Core	signature:(std::vector<std::string> data, int feat_dim, size_t i, size_t j)
+core::Core::praser	./backup_mk/Core_impl.h	/^        inline double Core<T>::praser(std::vector<std::string> data, int feat_dim, size_t i, size_t j){$/;"	f	class:core::Core	signature:(std::vector<std::string> data, int feat_dim, size_t i, size_t j)
+core::Core::praser	./backup_neo/Core_impl.h	/^        inline double Core<T>::praser(std::vector<std::string> data, int feat_dim, size_t i, size_t j){$/;"	f	class:core::Core	signature:(std::vector<std::string> data, int feat_dim, size_t i, size_t j)
+core::Random	./Core/Core.h	/^    inline int Random(int mod){$/;"	f	namespace:core	signature:(int mod)
+core::Round	./Core/Core.h	/^    inline int Round(double r){  $/;"	f	namespace:core	signature:(double r)
+count_type	./backup_neo/kmeans-pmlp.h	/^  	int count_type;   \/\/the function of counting cluster$/;"	m	struct:kmeans_parameter	access:public
+data	./Kmeans/Kmeans.h	/^            std::vector<double> data;$/;"	m	class:kmeans::Matrix	access:public
+degree	./backup_neo/kmeans-pmlp.h	/^	int degree;	\/* for poly *\/$/;"	m	struct:svm_parameter	access:public
+dt	./DT/DT.cpp	/^namespace dt{$/;"	n	file:
+dt	./DT/DT.h	/^namespace dt{$/;"	n
+dt::DT	./DT/DT.h	/^    class DT:public MLalgorithm<DT>{$/;"	c	namespace:dt	inherits:MLalgorithm
+dt::DT::beginDataScan	./DT/DT.cpp	/^    void DT::beginDataScan(std::vector<double> records, size_t feat_dim){$/;"	f	class:dt::DT	signature:(std::vector<double> records, size_t feat_dim)
+dt::DT::beginDataScan	./DT/DT.h	/^            void beginDataScan(std::vector<double> records, size_t feat_dim);$/;"	p	class:dt::DT	access:public	signature:(std::vector<double> records, size_t feat_dim)
+dt::DT::check	./DT/DT.h	/^            void check(){$/;"	f	class:dt::DT	access:public	signature:()
+dt::DT::cls_number	./DT/DT.h	/^            size_t cls_number;$/;"	m	class:dt::DT	access:public
+dt::DT::endDataScan	./DT/DT.cpp	/^    void DT::endDataScan(){$/;"	f	class:dt::DT	signature:()
+dt::DT::endDataScan	./DT/DT.h	/^            void endDataScan();$/;"	p	class:dt::DT	access:public	signature:()
+dt::DT::feat_depth	./DT/DT.h	/^            std::vector<size_t> feat_depth;$/;"	m	class:dt::DT	access:public
+dt::DT::feat_dim	./DT/DT.h	/^            size_t feat_dim;$/;"	m	class:dt::DT	access:public
+dt::DT::finish	./DT/DT.cpp	/^    void DT::finish(std::vector<double> records, size_t feat_dim){$/;"	f	class:dt::DT	signature:(std::vector<double> records, size_t feat_dim)
+dt::DT::finish	./DT/DT.h	/^            void finish(std::vector<double> records, size_t feat_dim);$/;"	p	class:dt::DT	access:public	signature:(std::vector<double> records, size_t feat_dim)
+dt::DT::init	./DT/DT.cpp	/^    void DT::init(std::vector<size_t>feat_depth, size_t cls_number){$/;"	f	class:dt::DT	signature:(std::vector<size_t>feat_depth, size_t cls_number)
+dt::DT::init	./DT/DT.h	/^            void init(std::vector<size_t>feat_depth, size_t cls_number);$/;"	p	class:dt::DT	access:public	signature:(std::vector<size_t>feat_depth, size_t cls_number)
+dt::DT::isConverged	./DT/DT.cpp	/^    bool DT::isConverged(DT* rhs, size_t feat_dim, double eps){$/;"	f	class:dt::DT	signature:(DT* rhs, size_t feat_dim, double eps)
+dt::DT::isConverged	./DT/DT.h	/^            bool isConverged(DT* rhs, size_t feat_dim, double eps);$/;"	p	class:dt::DT	access:public	signature:(DT* rhs, size_t feat_dim, double eps)
+dt::DT::nodes	./DT/DT.h	/^            std::vector<Node> nodes;$/;"	m	class:dt::DT	access:public
+dt::DT::operator +	./DT/DT.cpp	/^    DT* DT::operator +(DT &rhs){$/;"	f	class:dt::DT	signature:(DT &rhs)
+dt::DT::operator +	./DT/DT.h	/^            DT* operator +(DT &rhs);$/;"	p	class:dt::DT	access:public	signature:(DT &rhs)
+dt::DT::processRecord	./DT/DT.cpp	/^    DT* DT::processRecord(std::vector<double> records, size_t feat_dim){$/;"	f	class:dt::DT	signature:(std::vector<double> records, size_t feat_dim)
+dt::DT::processRecord	./DT/DT.h	/^            DT* processRecord(std::vector<double> records, size_t feat_dim);$/;"	p	class:dt::DT	access:public	signature:(std::vector<double> records, size_t feat_dim)
+dt::DT::serialize	./DT/DT.h	/^                void serialize (Archive &ar, const unsigned int version){$/;"	f	class:dt::DT	access:private	signature:(Archive &ar, const unsigned int version)
+dt::Matrix	./DT/DT.h	/^    class Matrix{$/;"	c	namespace:dt
+dt::Matrix::add	./DT/DT.h	/^            void add(size_t i, size_t j, int addon){$/;"	f	class:dt::Matrix	access:public	signature:(size_t i, size_t j, int addon)
+dt::Matrix::get	./DT/DT.h	/^            int get(size_t i, size_t j){$/;"	f	class:dt::Matrix	access:public	signature:(size_t i, size_t j)
+dt::Matrix::infoGainRate	./DT/DT.h	/^            double infoGainRate(){$/;"	f	class:dt::Matrix	access:public	signature:()
+dt::Matrix::init	./DT/DT.h	/^            void init(size_t nrow, size_t ncol){$/;"	f	class:dt::Matrix	access:public	signature:(size_t nrow, size_t ncol)
+dt::Matrix::mat	./DT/DT.h	/^            std::vector<int> mat;$/;"	m	class:dt::Matrix	access:public
+dt::Matrix::merge	./DT/DT.h	/^            Matrix merge(Matrix rhs){$/;"	f	class:dt::Matrix	access:public	signature:(Matrix rhs)
+dt::Matrix::ncol	./DT/DT.h	/^            size_t nrow, ncol;$/;"	m	class:dt::Matrix	access:public
+dt::Matrix::nrow	./DT/DT.h	/^            size_t nrow, ncol;$/;"	m	class:dt::Matrix	access:public
+dt::Matrix::print	./DT/DT.h	/^            void print(){$/;"	f	class:dt::Matrix	access:public	signature:()
+dt::Matrix::serialize	./DT/DT.h	/^                void serialize (Archive &ar, const unsigned int version){$/;"	f	class:dt::Matrix	access:private	signature:(Archive &ar, const unsigned int version)
+dt::Node	./DT/DT.h	/^    class Node{$/;"	c	namespace:dt
+dt::Node::D	./DT/DT.h	/^            std::vector<int> D;$/;"	m	class:dt::Node	access:public
+dt::Node::check	./DT/DT.h	/^            void check(){$/;"	f	class:dt::Node	access:public	signature:()
+dt::Node::get_hash	./DT/DT.h	/^            long long get_hash(){$/;"	f	class:dt::Node	access:public	signature:()
+dt::Node::hashcode	./DT/DT.h	/^            long long hashcode;$/;"	m	class:dt::Node	access:public
+dt::Node::index	./DT/DT.h	/^            std::vector<int> index;$/;"	m	class:dt::Node	access:public
+dt::Node::init	./DT/DT.h	/^            void init(std::vector<size_t>feat_depth, size_t cls_number){$/;"	f	class:dt::Node	access:public	signature:(std::vector<size_t>feat_depth, size_t cls_number)
+dt::Node::merge	./DT/DT.h	/^            Node merge(Node &rhs){$/;"	f	class:dt::Node	access:public	signature:(Node &rhs)
+dt::Node::operator ==	./DT/DT.h	/^            bool operator == (Node &rhs) const{$/;"	f	class:dt::Node	access:public	signature:(Node &rhs) const
+dt::Node::print	./DT/DT.h	/^            void print(){$/;"	f	class:dt::Node	access:public	signature:()
+dt::Node::serialize	./DT/DT.h	/^                void serialize (Archive &ar, const unsigned int version){$/;"	f	class:dt::Node	access:private	signature:(Archive &ar, const unsigned int version)
+dt::Node::split	./DT/DT.h	/^            int split(){$/;"	f	class:dt::Node	access:public	signature:()
+dt::Node::tag	./DT/DT.h	/^            bool tag;$/;"	m	class:dt::Node	access:public
+dt::Node::update	./DT/DT.h	/^            void update(std::vector<int> record){$/;"	f	class:dt::Node	access:public	signature:(std::vector<int> record)
+dt::Node::vec	./DT/DT.h	/^            std::vector<Matrix> vec;$/;"	m	class:dt::Node	access:public
+dt::Node::who	./DT/DT.h	/^            int who;$/;"	m	class:dt::Node	access:public
+endDataScan	./Cluster/Kmeans_Lloyd.cpp	/^    void Kmeans_Lloyd::endDataScan()$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:()
+endDataScan	./Cluster/Kmeans_Lloyd.h	/^        void endDataScan();$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:()
+endDataScan	./DT/DT.cpp	/^    void DT::endDataScan(){$/;"	f	class:dt::DT	signature:()
+endDataScan	./DT/DT.h	/^            void endDataScan();$/;"	p	class:dt::DT	access:public	signature:()
+endDataScan	./Kmeans/Kmeans.cpp	/^    void Kmeans::endDataScan(){$/;"	f	class:kmeans::Kmeans	signature:()
+endDataScan	./Kmeans/Kmeans.h	/^            void endDataScan();$/;"	p	class:kmeans::Kmeans	access:public	signature:()
+endDataScan	./MLalgorithm/MLalgorithm.h	/^        void endDataScan(){$/;"	f	class:MLalgorithm	access:public	signature:()
+eps	./backup_neo/kmeans-pmlp.h	/^	double eps;	\/* stopping criteria *\/$/;"	m	struct:svm_parameter	access:public
+euclidean_distance	./Cluster/Kmeans_Lloyd.cpp	/^    double Kmeans_Lloyd::euclidean_distance(std::vector<node> px,std::vector<node> py)$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:(std::vector<node> px,std::vector<node> py)
+euclidean_distance	./Cluster/Kmeans_Lloyd.h	/^        double euclidean_distance(std::vector<node> px,std::vector<node> py);$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:(std::vector<node> px,std::vector<node> py)
+euclidean_distance	./backup_neo/kmeans.cpp	/^double euclidean_distance(cluster_node *px,cluster_node *py)$/;"	f	signature:(cluster_node *px,cluster_node *py)
+exit_input_error	./Collection/Flexible_vector.cpp	/^void exit_input_error(int line_num)$/;"	f	signature:(int line_num)
+exit_input_error	./backup_neo/kmeans-fit.c	/^void exit_input_error(int line_num)$/;"	f	signature:(int line_num)
+exit_with_help	./backup_neo/kmeans-fit.c	/^void exit_with_help()$/;"	f
+f_vector	./Core/Core.h	/^                Flexible_vector *f_vector;$/;"	m	class:core::Core	access:public
+feat_depth	./DT/DT.h	/^            std::vector<size_t> feat_depth;$/;"	m	class:dt::DT	access:public
+feat_dim	./DT/DT.h	/^            size_t feat_dim;$/;"	m	class:dt::DT	access:public
+finish	./Cluster/Kmeans_Lloyd.cpp	/^    void Kmeans_Lloyd::finish(Flexible_vector *records, size_t feat_dim)$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:(Flexible_vector *records, size_t feat_dim)
+finish	./Cluster/Kmeans_Lloyd.h	/^        void finish(Flexible_vector *records, size_t feat_dim);$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:(Flexible_vector *records, size_t feat_dim)
+finish	./DT/DT.cpp	/^    void DT::finish(std::vector<double> records, size_t feat_dim){$/;"	f	class:dt::DT	signature:(std::vector<double> records, size_t feat_dim)
+finish	./DT/DT.h	/^            void finish(std::vector<double> records, size_t feat_dim);$/;"	p	class:dt::DT	access:public	signature:(std::vector<double> records, size_t feat_dim)
+finish	./Kmeans/Kmeans.cpp	/^    void Kmeans::finish(std::vector<double> records, size_t feat_dim){$/;"	f	class:kmeans::Kmeans	signature:(std::vector<double> records, size_t feat_dim)
+finish	./Kmeans/Kmeans.h	/^            void finish(std::vector<double> records, size_t feat_dim);$/;"	p	class:kmeans::Kmeans	access:public	signature:(std::vector<double> records, size_t feat_dim)
+finish	./MLalgorithm/MLalgorithm.h	/^        void finish(std::vector<double> records, size_t feat_dim){$/;"	f	class:MLalgorithm	access:public	signature:(std::vector<double> records, size_t feat_dim)
+free_sv	./backup_neo/kmeans-pmlp.h	/^	int free_sv;		\/* 1 if svm_model is created by svm_load_model*\/$/;"	m	struct:svm_model	access:public
+fvkl	./Cluster/Kmeans_Lloyd.h	/^        Flexible_vector fvkl;$/;"	m	class:kmeans_lloyd::Kmeans_Lloyd	access:public
+gamma	./backup_neo/kmeans-pmlp.h	/^	double gamma;	\/* for poly\/rbf\/sigmoid *\/$/;"	m	struct:svm_parameter	access:public
+get	./DT/DT.h	/^            int get(size_t i, size_t j){$/;"	f	class:dt::Matrix	access:public	signature:(size_t i, size_t j)
+get_hash	./DT/DT.h	/^            long long get_hash(){$/;"	f	class:dt::Node	access:public	signature:()
+get_value	./Kmeans/Kmeans.cpp	/^    std::vector<double> Matrix::get_value(size_t i){$/;"	f	class:kmeans::Matrix	signature:(size_t i)
+get_value	./Kmeans/Kmeans.h	/^            std::vector<double> get_value(size_t i);$/;"	p	class:kmeans::Matrix	access:public	signature:(size_t i)
+get_value_without_label	./Collection/Flexible_vector.cpp	/^std::vector<node> Flexible_vector::get_value_without_label(size_t loc)$/;"	f	class:Flexible_vector	signature:(size_t loc)
+get_value_without_label	./Collection/Flexible_vector.h	/^        std::vector<node> get_value_without_label(size_t loc);$/;"	p	class:Flexible_vector	access:public	signature:(size_t loc)
+hashcode	./DT/DT.h	/^            long long hashcode;$/;"	m	class:dt::Node	access:public
+index	./Collection/Flexible_vector.h	/^     int index;$/;"	m	struct:node	access:public
+index	./DT/DT.h	/^            std::vector<int> index;$/;"	m	class:dt::Node	access:public
+index	./backup_neo/kmeans-pmlp.h	/^	int index;$/;"	m	struct:cluster_node	access:public
+index	./backup_neo/kmeans-pmlp.h	/^	int index;$/;"	m	struct:svm_node	access:public
+inertia	./backup_neo/kmeans-pmlp.h	/^     double inertia;$/;"	m	struct:kmeans_parameter	access:public
+info	./backup_neo/kmeans.cpp	/^static void info(const char *fmt,...) {}$/;"	f	file:	signature:(const char *fmt,...)
+info	./backup_neo/kmeans.cpp	/^static void info(const char *fmt,...)$/;"	f	file:	signature:(const char *fmt,...)
+infoGainRate	./DT/DT.h	/^            double infoGainRate(){$/;"	f	class:dt::Matrix	access:public	signature:()
+init	./Collection/Flexible_vector.cpp	/^void Flexible_vector::init()$/;"	f	class:Flexible_vector	signature:()
+init	./Collection/Flexible_vector.cpp	/^void Flexible_vector::init(size_t l, size_t max_feature)$/;"	f	class:Flexible_vector	signature:(size_t l, size_t max_feature)
+init	./Collection/Flexible_vector.h	/^        void init();$/;"	p	class:Flexible_vector	access:public	signature:()
+init	./Collection/Flexible_vector.h	/^        void init(size_t l, size_t max_feature);$/;"	p	class:Flexible_vector	access:public	signature:(size_t l, size_t max_feature)
+init	./DT/DT.cpp	/^    void DT::init(std::vector<size_t>feat_depth, size_t cls_number){$/;"	f	class:dt::DT	signature:(std::vector<size_t>feat_depth, size_t cls_number)
+init	./DT/DT.h	/^            void init(size_t nrow, size_t ncol){$/;"	f	class:dt::Matrix	access:public	signature:(size_t nrow, size_t ncol)
+init	./DT/DT.h	/^            void init(std::vector<size_t>feat_depth, size_t cls_number);$/;"	p	class:dt::DT	access:public	signature:(std::vector<size_t>feat_depth, size_t cls_number)
+init	./DT/DT.h	/^            void init(std::vector<size_t>feat_depth, size_t cls_number){$/;"	f	class:dt::Node	access:public	signature:(std::vector<size_t>feat_depth, size_t cls_number)
+init	./Kmeans/Kmeans.cpp	/^    void Matrix::init (size_t nrow, size_t ncol){$/;"	f	class:kmeans::Matrix	signature:(size_t nrow, size_t ncol)
+init	./Kmeans/Kmeans.h	/^            void init(size_t nrow, size_t ncol);$/;"	p	class:kmeans::Matrix	access:public	signature:(size_t nrow, size_t ncol)
+init_kmeans_plusplus	./backup_neo/kmeans.cpp	/^    void init_kmeans_plusplus(cluster_problem *problem,kmeans_parameter *param,int *center_init);$/;"	p	class:Solver	file:	access:protected	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init)
+init_kmeans_plusplus	./backup_neo/kmeans.cpp	/^void Solver::init_kmeans_plusplus(cluster_problem *problem,kmeans_parameter *param,int *center_init)$/;"	f	class:Solver	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init)
+init_random	./Cluster/Kmeans_Lloyd.cpp	/^    std::vector<int> Kmeans_Lloyd::init_random(size_t length, size_t random_seed)$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:(size_t length, size_t random_seed)
+init_random	./Cluster/Kmeans_Lloyd.h	/^        std::vector<int> init_random(size_t length, size_t random_seed);$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:(size_t length, size_t random_seed)
+init_random	./backup_neo/kmeans.cpp	/^    int * init_random(int length, int random_seed);$/;"	p	class:Solver	file:	access:protected	signature:(int length, int random_seed)
+init_random	./backup_neo/kmeans.cpp	/^int * Solver::init_random(int length, int random_seed)$/;"	f	class:Solver	signature:(int length, int random_seed)
+init_sample	./backup_neo/kmeans.cpp	/^void init_sample(cluster_node *dst,cluster_node *src)$/;"	f	signature:(cluster_node *dst,cluster_node *src)
+init_type	./backup_neo/kmeans-pmlp.h	/^	int init_type;         \/\/initial type. {'k-means++', 'random', 'k-means||' or ndarray, or a callable}, optional. Method for initialization, default to 'k-means++':$/;"	m	struct:kmeans_parameter	access:public
+init_user_certain	./backup_neo/kmeans.cpp	/^    int * init_user_certain(int l);$/;"	p	class:Solver	file:	access:protected	signature:(int l)
+init_user_certain	./backup_neo/kmeans.cpp	/^int * Solver::init_user_certain(int length)$/;"	f	class:Solver	signature:(int length)
+insert_end	./Collection/Flexible_vector.cpp	/^void Flexible_vector::insert_end(Flexible_vector src, size_t loc)$/;"	f	class:Flexible_vector	signature:(Flexible_vector src, size_t loc)
+insert_end	./Collection/Flexible_vector.h	/^        void insert_end(Flexible_vector src, size_t loc);   \/\/insert the loc-th sample of src to the end of prob$/;"	p	class:Flexible_vector	access:public	signature:(Flexible_vector src, size_t loc)
+isConverged	./Cluster/Kmeans_Lloyd.cpp	/^    bool Kmeans_Lloyd::isConverged(Kmeans_Lloyd* rhs, size_t feat_dim, double eps)$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:(Kmeans_Lloyd* rhs, size_t feat_dim, double eps)
+isConverged	./Cluster/Kmeans_Lloyd.h	/^        bool isConverged(Kmeans_Lloyd* rhs, size_t feat_dim, double eps);$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:(Kmeans_Lloyd* rhs, size_t feat_dim, double eps)
+isConverged	./DT/DT.cpp	/^    bool DT::isConverged(DT* rhs, size_t feat_dim, double eps){$/;"	f	class:dt::DT	signature:(DT* rhs, size_t feat_dim, double eps)
+isConverged	./DT/DT.h	/^            bool isConverged(DT* rhs, size_t feat_dim, double eps);$/;"	p	class:dt::DT	access:public	signature:(DT* rhs, size_t feat_dim, double eps)
+isConverged	./Kmeans/Kmeans.cpp	/^    bool Kmeans::isConverged(Kmeans* rhs, size_t feat_dim, double eps){$/;"	f	class:kmeans::Kmeans	signature:(Kmeans* rhs, size_t feat_dim, double eps)
+isConverged	./Kmeans/Kmeans.h	/^            bool isConverged(Kmeans* rhs, size_t feat_dim, double eps);$/;"	p	class:kmeans::Kmeans	access:public	signature:(Kmeans* rhs, size_t feat_dim, double eps)
+isConverged	./MLalgorithm/MLalgorithm.h	/^        bool isConverged(Derived* rhs, size_t feat_dim, double eps){$/;"	f	class:MLalgorithm	access:public	signature:(Derived* rhs, size_t feat_dim, double eps)
+iter_counter	./backup_neo/kmeans-pmlp.h	/^    int iter_counter;$/;"	m	struct:kmeans_model	access:public
+kernel_type	./backup_neo/kmeans-pmlp.h	/^	int kernel_type;$/;"	m	struct:svm_parameter	access:public
+kmeans	./Kmeans/Kmeans.cpp	/^namespace kmeans{$/;"	n	file:
+kmeans	./Kmeans/Kmeans.h	/^namespace kmeans{$/;"	n
+kmeans::Kmeans	./Kmeans/Kmeans.h	/^    class Kmeans:public MLalgorithm<Kmeans>{$/;"	c	namespace:kmeans	inherits:MLalgorithm
+kmeans::Kmeans::beginDataScan	./Kmeans/Kmeans.cpp	/^    void Kmeans::beginDataScan(std::vector<double> records, size_t feat_dim){$/;"	f	class:kmeans::Kmeans	signature:(std::vector<double> records, size_t feat_dim)
+kmeans::Kmeans::beginDataScan	./Kmeans/Kmeans.h	/^            void beginDataScan(std::vector<double> records, size_t feat_dim);$/;"	p	class:kmeans::Kmeans	access:public	signature:(std::vector<double> records, size_t feat_dim)
+kmeans::Kmeans::endDataScan	./Kmeans/Kmeans.cpp	/^    void Kmeans::endDataScan(){$/;"	f	class:kmeans::Kmeans	signature:()
+kmeans::Kmeans::endDataScan	./Kmeans/Kmeans.h	/^            void endDataScan();$/;"	p	class:kmeans::Kmeans	access:public	signature:()
+kmeans::Kmeans::finish	./Kmeans/Kmeans.cpp	/^    void Kmeans::finish(std::vector<double> records, size_t feat_dim){$/;"	f	class:kmeans::Kmeans	signature:(std::vector<double> records, size_t feat_dim)
+kmeans::Kmeans::finish	./Kmeans/Kmeans.h	/^            void finish(std::vector<double> records, size_t feat_dim);$/;"	p	class:kmeans::Kmeans	access:public	signature:(std::vector<double> records, size_t feat_dim)
+kmeans::Kmeans::isConverged	./Kmeans/Kmeans.cpp	/^    bool Kmeans::isConverged(Kmeans* rhs, size_t feat_dim, double eps){$/;"	f	class:kmeans::Kmeans	signature:(Kmeans* rhs, size_t feat_dim, double eps)
+kmeans::Kmeans::isConverged	./Kmeans/Kmeans.h	/^            bool isConverged(Kmeans* rhs, size_t feat_dim, double eps);$/;"	p	class:kmeans::Kmeans	access:public	signature:(Kmeans* rhs, size_t feat_dim, double eps)
+kmeans::Kmeans::mat	./Kmeans/Kmeans.h	/^            Matrix mat;$/;"	m	class:kmeans::Kmeans	access:public
+kmeans::Kmeans::operator +	./Kmeans/Kmeans.cpp	/^    Kmeans* Kmeans::operator +(Kmeans &rhs){$/;"	f	class:kmeans::Kmeans	signature:(Kmeans &rhs)
+kmeans::Kmeans::operator +	./Kmeans/Kmeans.h	/^            Kmeans* operator +(Kmeans &rhs);$/;"	p	class:kmeans::Kmeans	access:public	signature:(Kmeans &rhs)
+kmeans::Kmeans::processRecord	./Kmeans/Kmeans.cpp	/^    Kmeans* Kmeans::processRecord(std::vector<double> records, size_t feat_dim){$/;"	f	class:kmeans::Kmeans	signature:(std::vector<double> records, size_t feat_dim)
+kmeans::Kmeans::processRecord	./Kmeans/Kmeans.h	/^            Kmeans* processRecord(std::vector<double> records, size_t feat_dim);$/;"	p	class:kmeans::Kmeans	access:public	signature:(std::vector<double> records, size_t feat_dim)
+kmeans::Kmeans::serialize	./Kmeans/Kmeans.h	/^                void serialize (Archive &ar, const unsigned int version){$/;"	f	class:kmeans::Kmeans	access:private	signature:(Archive &ar, const unsigned int version)
+kmeans::Matrix	./Kmeans/Kmeans.h	/^    class Matrix{$/;"	c	namespace:kmeans
+kmeans::Matrix::add	./Kmeans/Kmeans.cpp	/^    void Matrix::add (std::vector<double> record, size_t i){$/;"	f	class:kmeans::Matrix	signature:(std::vector<double> record, size_t i)
+kmeans::Matrix::add	./Kmeans/Kmeans.h	/^            void add(std::vector<double> record, size_t i);$/;"	p	class:kmeans::Matrix	access:public	signature:(std::vector<double> record, size_t i)
+kmeans::Matrix::data	./Kmeans/Kmeans.h	/^            std::vector<double> data;$/;"	m	class:kmeans::Matrix	access:public
+kmeans::Matrix::get_value	./Kmeans/Kmeans.cpp	/^    std::vector<double> Matrix::get_value(size_t i){$/;"	f	class:kmeans::Matrix	signature:(size_t i)
+kmeans::Matrix::get_value	./Kmeans/Kmeans.h	/^            std::vector<double> get_value(size_t i);$/;"	p	class:kmeans::Matrix	access:public	signature:(size_t i)
+kmeans::Matrix::init	./Kmeans/Kmeans.cpp	/^    void Matrix::init (size_t nrow, size_t ncol){$/;"	f	class:kmeans::Matrix	signature:(size_t nrow, size_t ncol)
+kmeans::Matrix::init	./Kmeans/Kmeans.h	/^            void init(size_t nrow, size_t ncol);$/;"	p	class:kmeans::Matrix	access:public	signature:(size_t nrow, size_t ncol)
+kmeans::Matrix::ncol	./Kmeans/Kmeans.h	/^            size_t ncol;$/;"	m	class:kmeans::Matrix	access:public
+kmeans::Matrix::nrow	./Kmeans/Kmeans.h	/^            size_t nrow;$/;"	m	class:kmeans::Matrix	access:public
+kmeans::Matrix::serialize	./Kmeans/Kmeans.h	/^                void serialize (Archive &ar, const unsigned int version){$/;"	f	class:kmeans::Matrix	access:private	signature:(Archive &ar, const unsigned int version)
+kmeans_Lloyd	./backup_neo/kmeans.cpp	/^    void kmeans_Lloyd(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model);$/;"	p	class:Solver	file:	access:protected	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)
+kmeans_Lloyd	./backup_neo/kmeans.cpp	/^void Solver::kmeans_Lloyd(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)$/;"	f	class:Solver	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)
+kmeans_Lloyd_mpi	./backup_neo/kmeans.cpp	/^    void kmeans_Lloyd_mpi(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model);$/;"	p	class:Solver	file:	access:protected	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)
+kmeans_Lloyd_mpi	./backup_neo/kmeans.cpp	/^void Solver::kmeans_Lloyd_mpi(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)$/;"	f	class:Solver	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)
+kmeans_check_parameter	./backup_neo/kmeans-pmlp.h	/^const char *kmeans_check_parameter(struct cluster_problem *prob,  struct kmeans_parameter *param);$/;"	p	signature:(struct cluster_problem *prob, struct kmeans_parameter *param)
+kmeans_destroy_param	./backup_neo/kmeans-pmlp.h	/^void kmeans_destroy_param(struct kmeans_parameter *param);$/;"	p	signature:(struct kmeans_parameter *param)
+kmeans_fit	./backup_neo/kmeans-pmlp.h	/^struct kmeans_model *kmeans_fit(struct cluster_problem *prob, struct kmeans_parameter *param);$/;"	p	signature:(struct cluster_problem *prob, struct kmeans_parameter *param)
+kmeans_fit	./backup_neo/kmeans.cpp	/^kmeans_model *kmeans_fit(cluster_problem *prob, kmeans_parameter *param)$/;"	f	signature:(cluster_problem *prob, kmeans_parameter *param)
+kmeans_fit_mpi	./backup_neo/kmeans.cpp	/^    kmeans_model *kmeans_fit_mpi(cluster_problem *prob, kmeans_parameter *param);$/;"	p	class:Solver	file:	access:public	signature:(cluster_problem *prob, kmeans_parameter *param)
+kmeans_fit_mpi	./backup_neo/kmeans.cpp	/^kmeans_model *Solver::kmeans_fit_mpi(cluster_problem *prob, kmeans_parameter *param)$/;"	f	class:Solver	signature:(cluster_problem *prob, kmeans_parameter *param)
+kmeans_fit_seq	./backup_neo/kmeans.cpp	/^    kmeans_model *kmeans_fit_seq(cluster_problem *prob, kmeans_parameter *param);$/;"	p	class:Solver	file:	access:public	signature:(cluster_problem *prob, kmeans_parameter *param)
+kmeans_fit_seq	./backup_neo/kmeans.cpp	/^kmeans_model *Solver::kmeans_fit_seq(cluster_problem *prob, kmeans_parameter *param)$/;"	f	class:Solver	signature:(cluster_problem *prob, kmeans_parameter *param)
+kmeans_free_and_destroy_model	./backup_neo/kmeans-pmlp.h	/^void kmeans_free_and_destroy_model(struct kmeans_model **model_ptr_ptr);$/;"	p	signature:(struct kmeans_model **model_ptr_ptr)
+kmeans_label	./backup_neo/kmeans-pmlp.h	/^	double *kmeans_label;		\/* every sample's label after kmeans when label is valid *\/$/;"	m	struct:kmeans_model	access:public
+kmeans_lloyd	./Cluster/Kmeans_Lloyd.cpp	/^namespace kmeans_lloyd{$/;"	n	file:
+kmeans_lloyd	./Cluster/Kmeans_Lloyd.h	/^namespace kmeans_lloyd{$/;"	n
+kmeans_lloyd::Kmeans_Lloyd	./Cluster/Kmeans_Lloyd.h	/^class Kmeans_Lloyd:public MLalgorithm<Kmeans_Lloyd>{$/;"	c	namespace:kmeans_lloyd	inherits:MLalgorithm
+kmeans_lloyd::Kmeans_Lloyd::beginDataScan	./Cluster/Kmeans_Lloyd.cpp	/^    void Kmeans_Lloyd::beginDataScan(Flexible_vector *records, size_t n_cluster)$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:(Flexible_vector *records, size_t n_cluster)
+kmeans_lloyd::Kmeans_Lloyd::beginDataScan	./Cluster/Kmeans_Lloyd.h	/^        void beginDataScan(Flexible_vector *records, size_t n_cluster);$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:(Flexible_vector *records, size_t n_cluster)
+kmeans_lloyd::Kmeans_Lloyd::endDataScan	./Cluster/Kmeans_Lloyd.cpp	/^    void Kmeans_Lloyd::endDataScan()$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:()
+kmeans_lloyd::Kmeans_Lloyd::endDataScan	./Cluster/Kmeans_Lloyd.h	/^        void endDataScan();$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:()
+kmeans_lloyd::Kmeans_Lloyd::euclidean_distance	./Cluster/Kmeans_Lloyd.cpp	/^    double Kmeans_Lloyd::euclidean_distance(std::vector<node> px,std::vector<node> py)$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:(std::vector<node> px,std::vector<node> py)
+kmeans_lloyd::Kmeans_Lloyd::euclidean_distance	./Cluster/Kmeans_Lloyd.h	/^        double euclidean_distance(std::vector<node> px,std::vector<node> py);$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:(std::vector<node> px,std::vector<node> py)
+kmeans_lloyd::Kmeans_Lloyd::finish	./Cluster/Kmeans_Lloyd.cpp	/^    void Kmeans_Lloyd::finish(Flexible_vector *records, size_t feat_dim)$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:(Flexible_vector *records, size_t feat_dim)
+kmeans_lloyd::Kmeans_Lloyd::finish	./Cluster/Kmeans_Lloyd.h	/^        void finish(Flexible_vector *records, size_t feat_dim);$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:(Flexible_vector *records, size_t feat_dim)
+kmeans_lloyd::Kmeans_Lloyd::fvkl	./Cluster/Kmeans_Lloyd.h	/^        Flexible_vector fvkl;$/;"	m	class:kmeans_lloyd::Kmeans_Lloyd	access:public
+kmeans_lloyd::Kmeans_Lloyd::init_random	./Cluster/Kmeans_Lloyd.cpp	/^    std::vector<int> Kmeans_Lloyd::init_random(size_t length, size_t random_seed)$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:(size_t length, size_t random_seed)
+kmeans_lloyd::Kmeans_Lloyd::init_random	./Cluster/Kmeans_Lloyd.h	/^        std::vector<int> init_random(size_t length, size_t random_seed);$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:(size_t length, size_t random_seed)
+kmeans_lloyd::Kmeans_Lloyd::isConverged	./Cluster/Kmeans_Lloyd.cpp	/^    bool Kmeans_Lloyd::isConverged(Kmeans_Lloyd* rhs, size_t feat_dim, double eps)$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:(Kmeans_Lloyd* rhs, size_t feat_dim, double eps)
+kmeans_lloyd::Kmeans_Lloyd::isConverged	./Cluster/Kmeans_Lloyd.h	/^        bool isConverged(Kmeans_Lloyd* rhs, size_t feat_dim, double eps);$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:(Kmeans_Lloyd* rhs, size_t feat_dim, double eps)
+kmeans_lloyd::Kmeans_Lloyd::operator +	./Cluster/Kmeans_Lloyd.cpp	/^    Kmeans_Lloyd* Kmeans_Lloyd::operator +(Kmeans_Lloyd &rhs)$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:(Kmeans_Lloyd &rhs)
+kmeans_lloyd::Kmeans_Lloyd::operator +	./Cluster/Kmeans_Lloyd.h	/^        Kmeans_Lloyd* operator +(Kmeans_Lloyd &rhs);$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:(Kmeans_Lloyd &rhs)
+kmeans_lloyd::Kmeans_Lloyd::processRecord	./Cluster/Kmeans_Lloyd.cpp	/^    Kmeans_Lloyd* Kmeans_Lloyd::processRecord(Flexible_vector *records, size_t feat_dim)$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:(Flexible_vector *records, size_t feat_dim)
+kmeans_lloyd::Kmeans_Lloyd::processRecord	./Cluster/Kmeans_Lloyd.h	/^        Kmeans_Lloyd* processRecord(Flexible_vector *records, size_t feat_dim);$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:(Flexible_vector *records, size_t feat_dim)
+kmeans_lloyd::Kmeans_Lloyd::serialize	./Cluster/Kmeans_Lloyd.h	/^            void serialize (Archive &ar, const unsigned int version){$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	access:private	signature:(Archive &ar, const unsigned int version)
+kmeans_load_model	./backup_neo/kmeans-pmlp.h	/^struct kmeans_model *kmeans_load_model(char *model_file_name);$/;"	p	signature:(char *model_file_name)
+kmeans_model	./backup_neo/kmeans-pmlp.h	/^struct kmeans_model$/;"	s
+kmeans_model::center_count	./backup_neo/kmeans-pmlp.h	/^	cluster_node **center_count;		\/* count centers (center[l]) for kmeans*\/$/;"	m	struct:kmeans_model	access:public
+kmeans_model::center_init	./backup_neo/kmeans-pmlp.h	/^	int *center_init;		\/* initial centers (center[l]) *\/$/;"	m	struct:kmeans_model	access:public
+kmeans_model::center_medoids	./backup_neo/kmeans-pmlp.h	/^	int *center_medoids;		\/* centers (center[l]) for kmedoids*\/$/;"	m	struct:kmeans_model	access:public
+kmeans_model::iter_counter	./backup_neo/kmeans-pmlp.h	/^    int iter_counter;$/;"	m	struct:kmeans_model	access:public
+kmeans_model::kmeans_label	./backup_neo/kmeans-pmlp.h	/^	double *kmeans_label;		\/* every sample's label after kmeans when label is valid *\/$/;"	m	struct:kmeans_model	access:public
+kmeans_model::kmeans_order	./backup_neo/kmeans-pmlp.h	/^	int *kmeans_order;		\/* every sample's label after kmeans when label is useless*\/$/;"	m	struct:kmeans_model	access:public
+kmeans_model::l	./backup_neo/kmeans-pmlp.h	/^	int l;			\/* total center number *\/$/;"	m	struct:kmeans_model	access:public
+kmeans_model::l_test	./backup_neo/kmeans-pmlp.h	/^    int  l_test;$/;"	m	struct:kmeans_model	access:public
+kmeans_model::max_index	./backup_neo/kmeans-pmlp.h	/^    int max_index;$/;"	m	struct:kmeans_model	access:public
+kmeans_model::max_iter	./backup_neo/kmeans-pmlp.h	/^    int max_iter;$/;"	m	struct:kmeans_model	access:public
+kmeans_model::n_clusters	./backup_neo/kmeans-pmlp.h	/^	int n_clusters;		\/* number of classes, = 2 in regression\/one class svm *\/$/;"	m	struct:kmeans_model	access:public
+kmeans_model::param	./backup_neo/kmeans-pmlp.h	/^	struct kmeans_parameter param;	\/* parameter *\/$/;"	m	struct:kmeans_model	typeref:struct:kmeans_model::kmeans_parameter	access:public
+kmeans_model::test_out	./backup_neo/kmeans-pmlp.h	/^    struct cluster_problem test_out;$/;"	m	struct:kmeans_model	typeref:struct:kmeans_model::cluster_problem	access:public
+kmeans_model::total_cost	./backup_neo/kmeans-pmlp.h	/^	double total_cost;  \/\/cost of clustering$/;"	m	struct:kmeans_model	access:public
+kmeans_order	./backup_neo/kmeans-pmlp.h	/^	int *kmeans_order;		\/* every sample's label after kmeans when label is useless*\/$/;"	m	struct:kmeans_model	access:public
+kmeans_parameter	./backup_neo/kmeans-pmlp.h	/^struct kmeans_parameter$/;"	s
+kmeans_parameter::best_n_iter	./backup_neo/kmeans-pmlp.h	/^     int best_n_iter;$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::centroid	./backup_neo/kmeans-pmlp.h	/^ 	 double centroid;  \/\/array with shape (k, n_features). Centroids found at the last iteration of k-means.$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::copy_x	./backup_neo/kmeans-pmlp.h	/^    double copy_x;$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::count_type	./backup_neo/kmeans-pmlp.h	/^  	int count_type;   \/\/the function of counting cluster$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::inertia	./backup_neo/kmeans-pmlp.h	/^     double inertia;$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::init_type	./backup_neo/kmeans-pmlp.h	/^	int init_type;         \/\/initial type. {'k-means++', 'random', 'k-means||' or ndarray, or a callable}, optional. Method for initialization, default to 'k-means++':$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::label	./backup_neo/kmeans-pmlp.h	/^	 int  label;      \/\/integer ndarray with shape (n_samples,).label[i] is the code or index of the centroid the i'th observation is closest to.$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::max_index	./backup_neo/kmeans-pmlp.h	/^	int max_index;    \/\/ Maximum number of features of samples.$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::max_iter	./backup_neo/kmeans-pmlp.h	/^	int max_iter;    \/\/ optional, default 300. Maximum number of iterations of the k-means algorithm to run.$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::n_clusters	./backup_neo/kmeans-pmlp.h	/^	int n_clusters;  \/\/ The number of clusters to form as well as the number of centroids to generate.$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::n_init	./backup_neo/kmeans-pmlp.h	/^	int n_init;      \/\/optional, default: 10. Number of time the k-means algorithm will be run with different centroid seeds. The final results will be the best output of n_init consecutive runs in terms of inertia.$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::n_jobs	./backup_neo/kmeans-pmlp.h	/^    int n_jobs;$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::parallel_type	./backup_neo/kmeans-pmlp.h	/^	int parallel_type;         \/\/parallel type. {'SEQ', 'MPI'}, optional. Method for parallelization, default to 'SEQ':$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::precompute_distances	./backup_neo/kmeans-pmlp.h	/^    bool precompute_distances; \/\/ {'auto', True, False}$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::return_n_iter	./backup_neo/kmeans-pmlp.h	/^     bool return_n_iter;   \/\/ optional. Whether or not to return the number of iterations.$/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::save_type	./backup_neo/kmeans-pmlp.h	/^    int save_type; $/;"	m	struct:kmeans_parameter	access:public
+kmeans_parameter::tol	./backup_neo/kmeans-pmlp.h	/^	double tol; \/\/ optional. The relative increment in the results before declaring convergence.$/;"	m	struct:kmeans_parameter	access:public
+kmeans_print_string	./backup_neo/kmeans.cpp	/^static void (*kmeans_print_string) (const char *) = &print_string_stdout;$/;"	v	file:
+kmeans_save_model_classification	./backup_neo/kmeans-pmlp.h	/^int kmeans_save_model_classification(char *model_file_name, struct kmeans_model *model);$/;"	p	signature:(char *model_file_name, struct kmeans_model *model)
+kmeans_save_model_classification	./backup_neo/kmeans.cpp	/^int kmeans_save_model_classification(char *model_file_name, kmeans_model *model)$/;"	f	signature:(char *model_file_name, kmeans_model *model)
+kmeans_save_model_cluster	./backup_neo/kmeans-pmlp.h	/^int kmeans_save_model_cluster(char *model_file_name, struct kmeans_model *model);$/;"	p	signature:(char *model_file_name, struct kmeans_model *model)
+kmeans_save_model_cluster	./backup_neo/kmeans.cpp	/^int kmeans_save_model_cluster(char *model_file_name, kmeans_model *model)$/;"	f	signature:(char *model_file_name, kmeans_model *model)
+kmeans_set_print_string_function	./backup_neo/kmeans-pmlp.h	/^void kmeans_set_print_string_function(void (*print_func)(const char *));$/;"	p	signature:(void (*print_func)(const char *))
+kmeans_set_print_string_function	./backup_neo/kmeans.cpp	/^void kmeans_set_print_string_function(void (*print_func)(const char *))$/;"	f	signature:(void (*print_func)(const char *))
+kmeans_version	./backup_neo/kmeans.cpp	/^int kmeans_version = KMEANS_PMLP_VERSION;$/;"	v
+kmedoids_pam_first_medoids	./backup_neo/kmeans.cpp	/^    void kmedoids_pam_first_medoids(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model);$/;"	p	class:Solver	file:	access:protected	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)
+kmedoids_pam_first_medoids	./backup_neo/kmeans.cpp	/^void Solver::kmedoids_pam_first_medoids(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)$/;"	f	class:Solver	signature:(cluster_problem *problem,kmeans_parameter *param,int *center_init,kmeans_model *model)
+l	./Collection/Flexible_vector.h	/^    int l;$/;"	m	struct:problem	access:public
+l	./backup_neo/kmeans-pmlp.h	/^	int l;			\/* total #SV *\/$/;"	m	struct:svm_model	access:public
+l	./backup_neo/kmeans-pmlp.h	/^	int l;			\/* total center number *\/$/;"	m	struct:kmeans_model	access:public
+l	./backup_neo/kmeans-pmlp.h	/^	int l;$/;"	m	struct:cluster_problem	access:public
+l	./backup_neo/kmeans-pmlp.h	/^	int l;$/;"	m	struct:svm_problem	access:public
+l_test	./backup_neo/kmeans-pmlp.h	/^    int  l_test;$/;"	m	struct:kmeans_model	access:public
+label	./backup_neo/kmeans-pmlp.h	/^	 int  label;      \/\/integer ndarray with shape (n_samples,).label[i] is the code or index of the centroid the i'th observation is closest to.$/;"	m	struct:kmeans_parameter	access:public
+label	./backup_neo/kmeans-pmlp.h	/^	int *label;		\/* label of each class (label[k]) *\/$/;"	m	struct:svm_model	access:public
+line	./backup_neo/kmeans-fit.c	/^static char *line = NULL;$/;"	v	file:
+main	./backup_mk/main_mk.cpp	/^int main(int argc,char *argv[]){$/;"	f	signature:(int argc,char *argv[])
+main	./backup_neo/kmeans-fit.c	/^int main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
+main	./backup_neo/main.cpp	/^int main(int argc,char *argv[]){$/;"	f	signature:(int argc,char *argv[])
+main	./main.cpp	/^int main(int argc,char *argv[]){$/;"	f	signature:(int argc,char *argv[])
+main	./main_mk.cpp	/^int main(int argc,char *argv[]){$/;"	f	signature:(int argc,char *argv[])
+main	./main_neo.cpp	/^int main(int argc,char *argv[]){$/;"	f	signature:(int argc,char *argv[])
+mainLoop	./Core/Core.h	/^                T* mainLoop(int argc, char* argv[], $/;"	p	class:core::Core	access:public	signature:(int argc, char* argv[], T* ptr, double eps, size_t feat_dim)
+mainLoop	./Core/Core_impl.h	/^        T* Core<T>::mainLoop(int argc, char* argv[], $/;"	f	class:core::Core	signature:(int argc, char* argv[], T *ptr, double eps, size_t feat_dim)
+mainLoop	./backup_mk/Core_impl.h	/^        T* Core<T>::mainLoop(int argc, char* argv[], $/;"	f	class:core::Core	signature:(int argc, char* argv[], T *ptr, double eps, size_t feat_dim)
+mainLoop	./backup_neo/Core_impl.h	/^        T* Core<T>::mainLoop(int argc, char* argv[], $/;"	f	class:core::Core	signature:(int argc, char* argv[], T *ptr, double eps, size_t feat_dim)
+main_vector	./Collection/Flexible_vector.h	/^        void main_vector(int argc,char* argv[]);$/;"	p	class:Flexible_vector	access:public	signature:(int argc,char* argv[])
+mat	./DT/DT.h	/^            std::vector<int> mat;$/;"	m	class:dt::Matrix	access:public
+mat	./Kmeans/Kmeans.h	/^            Matrix mat;$/;"	m	class:kmeans::Kmeans	access:public
+max	./backup_neo/kmeans.cpp	/^template <class T> static inline T max(T x,T y) { return (x>y)?x:y; }$/;"	f	file:	signature:(T x,T y)
+max_feature	./Collection/Flexible_vector.h	/^	int max_feature;$/;"	m	struct:problem	access:public
+max_index	./backup_neo/kmeans-pmlp.h	/^	int max_index;    \/\/ Maximum number of features of samples.$/;"	m	struct:kmeans_parameter	access:public
+max_index	./backup_neo/kmeans-pmlp.h	/^    int max_index;$/;"	m	struct:kmeans_model	access:public
+max_iter	./backup_neo/kmeans-pmlp.h	/^	int max_iter;    \/\/ optional, default 300. Maximum number of iterations of the k-means algorithm to run.$/;"	m	struct:kmeans_parameter	access:public
+max_iter	./backup_neo/kmeans-pmlp.h	/^    int max_iter;$/;"	m	struct:kmeans_model	access:public
+max_line_len	./backup_neo/kmeans-fit.c	/^static int max_line_len;$/;"	v	file:
+merge	./Core/Core.h	/^                T* merge(int rank, boost::mpi::communicator world, T* local_update);$/;"	p	class:core::Core	access:public	signature:(int rank, boost::mpi::communicator world, T* local_update)
+merge	./Core/Core_impl.h	/^        T* Core<T>::merge(int rank, boost::mpi::communicator world, T* local_update){$/;"	f	class:core::Core	signature:(int rank, boost::mpi::communicator world, T* local_update)
+merge	./DT/DT.h	/^            Matrix merge(Matrix rhs){$/;"	f	class:dt::Matrix	access:public	signature:(Matrix rhs)
+merge	./DT/DT.h	/^            Node merge(Node &rhs){$/;"	f	class:dt::Node	access:public	signature:(Node &rhs)
+merge	./backup_mk/Core_impl.h	/^        T* Core<T>::merge(int rank, boost::mpi::communicator world, T* local_update){$/;"	f	class:core::Core	signature:(int rank, boost::mpi::communicator world, T* local_update)
+merge	./backup_neo/Core_impl.h	/^        T* Core<T>::merge(int rank, boost::mpi::communicator world, T* local_update){$/;"	f	class:core::Core	signature:(int rank, boost::mpi::communicator world, T* local_update)
+min	./backup_neo/kmeans.cpp	/^template <class T> static inline T min(T x,T y) { return (x<y)?x:y; }$/;"	f	file:	signature:(T x,T y)
+model	./backup_neo/kmeans-fit.c	/^struct kmeans_model *model;$/;"	v	typeref:struct:kmeans_model
+nSV	./backup_neo/kmeans-pmlp.h	/^	int *nSV;		\/* number of SVs for each class (nSV[k]) *\/$/;"	m	struct:svm_model	access:public
+n_clusters	./backup_neo/kmeans-pmlp.h	/^	int n_clusters;		\/* number of classes, = 2 in regression\/one class svm *\/$/;"	m	struct:kmeans_model	access:public
+n_clusters	./backup_neo/kmeans-pmlp.h	/^	int n_clusters;  \/\/ The number of clusters to form as well as the number of centroids to generate.$/;"	m	struct:kmeans_parameter	access:public
+n_init	./backup_neo/kmeans-pmlp.h	/^	int n_init;      \/\/optional, default: 10. Number of time the k-means algorithm will be run with different centroid seeds. The final results will be the best output of n_init consecutive runs in terms of inertia.$/;"	m	struct:kmeans_parameter	access:public
+n_jobs	./backup_neo/kmeans-pmlp.h	/^    int n_jobs;$/;"	m	struct:kmeans_parameter	access:public
+ncol	./DT/DT.h	/^            size_t nrow, ncol;$/;"	m	class:dt::Matrix	access:public
+ncol	./Kmeans/Kmeans.h	/^            size_t ncol;$/;"	m	class:kmeans::Matrix	access:public
+node	./Collection/Flexible_vector.h	/^struct node$/;"	s
+node::index	./Collection/Flexible_vector.h	/^     int index;$/;"	m	struct:node	access:public
+node::serialize	./Collection/Flexible_vector.h	/^        void serialize (Archive &ar, const unsigned int version){$/;"	f	struct:node	access:public	signature:(Archive &ar, const unsigned int version)
+node::value	./Collection/Flexible_vector.h	/^	 double value;$/;"	m	struct:node	access:public
+nodes	./DT/DT.h	/^            std::vector<Node> nodes;$/;"	m	class:dt::DT	access:public
+nr_class	./backup_neo/kmeans-pmlp.h	/^	int nr_class;		\/* number of classes, = 2 in regression\/one class svm *\/$/;"	m	struct:svm_model	access:public
+nr_weight	./backup_neo/kmeans-pmlp.h	/^	int nr_weight;		\/* for C_SVC *\/$/;"	m	struct:svm_parameter	access:public
+nrow	./DT/DT.h	/^            size_t nrow, ncol;$/;"	m	class:dt::Matrix	access:public
+nrow	./Kmeans/Kmeans.h	/^            size_t nrow;$/;"	m	class:kmeans::Matrix	access:public
+nu	./backup_neo/kmeans-pmlp.h	/^	double nu;	\/* for NU_SVC, ONE_CLASS, and NU_SVR *\/$/;"	m	struct:svm_parameter	access:public
+operator +	./Cluster/Kmeans_Lloyd.cpp	/^    Kmeans_Lloyd* Kmeans_Lloyd::operator +(Kmeans_Lloyd &rhs)$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:(Kmeans_Lloyd &rhs)
+operator +	./Cluster/Kmeans_Lloyd.h	/^        Kmeans_Lloyd* operator +(Kmeans_Lloyd &rhs);$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:(Kmeans_Lloyd &rhs)
+operator +	./DT/DT.cpp	/^    DT* DT::operator +(DT &rhs){$/;"	f	class:dt::DT	signature:(DT &rhs)
+operator +	./DT/DT.h	/^            DT* operator +(DT &rhs);$/;"	p	class:dt::DT	access:public	signature:(DT &rhs)
+operator +	./Kmeans/Kmeans.cpp	/^    Kmeans* Kmeans::operator +(Kmeans &rhs){$/;"	f	class:kmeans::Kmeans	signature:(Kmeans &rhs)
+operator +	./Kmeans/Kmeans.h	/^            Kmeans* operator +(Kmeans &rhs);$/;"	p	class:kmeans::Kmeans	access:public	signature:(Kmeans &rhs)
+operator +	./MLalgorithm/MLalgorithm.h	/^        Derived* operator + (Derived &rhs){$/;"	f	class:MLalgorithm	access:public	signature:(Derived &rhs)
+operator ==	./DT/DT.h	/^            bool operator == (Node &rhs) const{$/;"	f	class:dt::Node	access:public	signature:(Node &rhs) const
+operator []	./Collection/Collection.h	/^        virtual std::vector<double> operator [](size_t loc) const =0;$/;"	p	class:Collection	access:public	signature:(size_t loc) const
+operator []	./Collection/Flexible_vector.cpp	/^std::vector<double> Flexible_vector::operator [](size_t loc) const $/;"	f	class:Flexible_vector	signature:(size_t loc) const
+operator []	./Collection/Flexible_vector.h	/^        std::vector<double> operator [](size_t loc) const ;$/;"	p	class:Flexible_vector	access:public	signature:(size_t loc) const
+output_problem	./Collection/Flexible_vector.cpp	/^void Flexible_vector::output_problem(std::string filename, problem prob)$/;"	f	class:Flexible_vector	signature:(std::string filename, problem prob)
+output_problem	./Collection/Flexible_vector.h	/^        void output_problem(std::string filename,problem prb);$/;"	p	class:Flexible_vector	access:public	signature:(std::string filename,problem prb)
+p	./backup_neo/kmeans-pmlp.h	/^	double p;	\/* for EPSILON_SVR *\/$/;"	m	struct:svm_parameter	access:public
+parallel_type	./backup_neo/kmeans-pmlp.h	/^	int parallel_type;         \/\/parallel type. {'SEQ', 'MPI'}, optional. Method for parallelization, default to 'SEQ':$/;"	m	struct:kmeans_parameter	access:public
+param	./backup_neo/kmeans-fit.c	/^struct kmeans_parameter param;		\/\/ set by parse_command_line$/;"	v	typeref:struct:kmeans_parameter
+param	./backup_neo/kmeans-pmlp.h	/^	struct kmeans_parameter param;	\/* parameter *\/$/;"	m	struct:kmeans_model	typeref:struct:kmeans_model::kmeans_parameter	access:public
+param	./backup_neo/kmeans-pmlp.h	/^	struct svm_parameter param;	\/* parameter *\/$/;"	m	struct:svm_model	typeref:struct:svm_model::svm_parameter	access:public
+parse_command_line	./backup_neo/kmeans-fit.c	/^void parse_command_line(int argc, char **argv, char *input_file_name, char *model_file_name)$/;"	f	signature:(int argc, char **argv, char *input_file_name, char *model_file_name)
+parse_command_line	./backup_neo/kmeans-fit.c	/^void parse_command_line(int argc, char **argv, char *input_file_name, char *model_file_name);$/;"	p	file:	signature:(int argc, char **argv, char *input_file_name, char *model_file_name)
+partition	./Collection/Flexible_vector.cpp	/^Flexible_vector* Flexible_vector::partition(Flexible_vector *origin, size_t number, size_t loc, size_t feat_dim)$/;"	f	class:Flexible_vector	signature:(Flexible_vector *origin, size_t number, size_t loc, size_t feat_dim)
+partition	./Collection/Flexible_vector.h	/^        Flexible_vector* partition(Flexible_vector *origin, size_t number, size_t loc, size_t feat_dim);$/;"	p	class:Flexible_vector	access:public	signature:(Flexible_vector *origin, size_t number, size_t loc, size_t feat_dim)
+partition	./Core/Core.h	/^                std::vector<double> partition(std::vector<std::string> origin,$/;"	p	class:core::Core	access:public	signature:(std::vector<std::string> origin, size_t number, size_t loc, size_t feat_dim)
+partition	./Core/Core_impl.h	/^        inline std::vector<double> Core<T>::partition(std::vector<std::string> origin, size_t number, size_t loc, size_t feat_dim){$/;"	f	class:core::Core	signature:(std::vector<std::string> origin, size_t number, size_t loc, size_t feat_dim)
+partition	./backup_mk/Core_impl.h	/^        inline std::vector<double> Core<T>::partition(std::vector<std::string> origin, size_t number, size_t loc, size_t feat_dim){$/;"	f	class:core::Core	signature:(std::vector<std::string> origin, size_t number, size_t loc, size_t feat_dim)
+powi	./backup_neo/kmeans.cpp	/^static inline double powi(double base, int times)$/;"	f	file:	signature:(double base, int times)
+praser	./Core/Core.h	/^                double praser(std::vector<std::string> data, int feat_dim, size_t i, size_t j);$/;"	p	class:core::Core	access:public	signature:(std::vector<std::string> data, int feat_dim, size_t i, size_t j)
+praser	./Core/Core_impl.h	/^        inline double Core<T>::praser(std::vector<std::string> data, int feat_dim, size_t i, size_t j){$/;"	f	class:core::Core	signature:(std::vector<std::string> data, int feat_dim, size_t i, size_t j)
+praser	./backup_mk/Core_impl.h	/^        inline double Core<T>::praser(std::vector<std::string> data, int feat_dim, size_t i, size_t j){$/;"	f	class:core::Core	signature:(std::vector<std::string> data, int feat_dim, size_t i, size_t j)
+praser	./backup_neo/Core_impl.h	/^        inline double Core<T>::praser(std::vector<std::string> data, int feat_dim, size_t i, size_t j){$/;"	f	class:core::Core	signature:(std::vector<std::string> data, int feat_dim, size_t i, size_t j)
+precompute_distances	./backup_neo/kmeans-pmlp.h	/^    bool precompute_distances; \/\/ {'auto', True, False}$/;"	m	struct:kmeans_parameter	access:public
+print	./DT/DT.h	/^            void print(){$/;"	f	class:dt::Matrix	access:public	signature:()
+print	./DT/DT.h	/^            void print(){$/;"	f	class:dt::Node	access:public	signature:()
+print_fv	./Collection/Flexible_vector.cpp	/^void Flexible_vector::print_fv()$/;"	f	class:Flexible_vector	signature:()
+print_fv	./Collection/Flexible_vector.h	/^        void print_fv();$/;"	p	class:Flexible_vector	access:public	signature:()
+print_null	./backup_neo/kmeans-fit.c	/^void print_null(const char *s) {}$/;"	f	signature:(const char *s)
+print_string_stdout	./backup_neo/kmeans.cpp	/^static void print_string_stdout(const char *s)$/;"	f	file:	signature:(const char *s)
+prob	./Collection/Flexible_vector.h	/^        problem prob;$/;"	m	class:Flexible_vector	access:public
+prob	./backup_neo/kmeans-fit.c	/^struct cluster_problem prob;		\/\/ set by read_problem$/;"	v	typeref:struct:cluster_problem
+probA	./backup_neo/kmeans-pmlp.h	/^	double *probA;		\/* pariwise probability information *\/$/;"	m	struct:svm_model	access:public
+probB	./backup_neo/kmeans-pmlp.h	/^	double *probB;$/;"	m	struct:svm_model	access:public
+probability	./backup_neo/kmeans-pmlp.h	/^	int probability; \/* do probability estimates *\/$/;"	m	struct:svm_parameter	access:public
+problem	./Collection/Flexible_vector.h	/^struct problem$/;"	s
+problem::l	./Collection/Flexible_vector.h	/^    int l;$/;"	m	struct:problem	access:public
+problem::max_feature	./Collection/Flexible_vector.h	/^	int max_feature;$/;"	m	struct:problem	access:public
+problem::serialize	./Collection/Flexible_vector.h	/^        void serialize (Archive &ar, const unsigned int version){$/;"	f	struct:problem	access:public	signature:(Archive &ar, const unsigned int version)
+problem::x	./Collection/Flexible_vector.h	/^    std::vector<node> x;$/;"	m	struct:problem	access:public
+problem::x_interval	./Collection/Flexible_vector.h	/^    std::vector<int> x_interval;$/;"	m	struct:problem	access:public
+problem::x_ptr	./Collection/Flexible_vector.h	/^    std::vector<int> x_ptr;$/;"	m	struct:problem	access:public
+problem::y	./Collection/Flexible_vector.h	/^    std::vector<double> y;$/;"	m	struct:problem	access:public
+processRecord	./Cluster/Kmeans_Lloyd.cpp	/^    Kmeans_Lloyd* Kmeans_Lloyd::processRecord(Flexible_vector *records, size_t feat_dim)$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	signature:(Flexible_vector *records, size_t feat_dim)
+processRecord	./Cluster/Kmeans_Lloyd.h	/^        Kmeans_Lloyd* processRecord(Flexible_vector *records, size_t feat_dim);$/;"	p	class:kmeans_lloyd::Kmeans_Lloyd	access:public	signature:(Flexible_vector *records, size_t feat_dim)
+processRecord	./DT/DT.cpp	/^    DT* DT::processRecord(std::vector<double> records, size_t feat_dim){$/;"	f	class:dt::DT	signature:(std::vector<double> records, size_t feat_dim)
+processRecord	./DT/DT.h	/^            DT* processRecord(std::vector<double> records, size_t feat_dim);$/;"	p	class:dt::DT	access:public	signature:(std::vector<double> records, size_t feat_dim)
+processRecord	./Kmeans/Kmeans.cpp	/^    Kmeans* Kmeans::processRecord(std::vector<double> records, size_t feat_dim){$/;"	f	class:kmeans::Kmeans	signature:(std::vector<double> records, size_t feat_dim)
+processRecord	./Kmeans/Kmeans.h	/^            Kmeans* processRecord(std::vector<double> records, size_t feat_dim);$/;"	p	class:kmeans::Kmeans	access:public	signature:(std::vector<double> records, size_t feat_dim)
+processRecord	./MLalgorithm/MLalgorithm.h	/^        Derived* processRecord (std::vector<double> records, size_t feat_dim){$/;"	f	class:MLalgorithm	access:public	signature:(std::vector<double> records, size_t feat_dim)
+read_problem_without_index	./backup_neo/kmeans-fit.c	/^void read_problem_without_index(const char *filename)$/;"	f	signature:(const char *filename)
+read_problem_without_index	./backup_neo/kmeans-fit.c	/^void read_problem_without_index(const char *filename);$/;"	p	file:	signature:(const char *filename)
+readline	./backup_neo/kmeans-fit.c	/^static char* readline(FILE *input)$/;"	f	file:	signature:(FILE *input)
+return_n_iter	./backup_neo/kmeans-pmlp.h	/^     bool return_n_iter;   \/\/ optional. Whether or not to return the number of iterations.$/;"	m	struct:kmeans_parameter	access:public
+rho	./backup_neo/kmeans-pmlp.h	/^	double *rho;		\/* constants in decision functions (rho[k*(k-1)\/2]) *\/$/;"	m	struct:svm_model	access:public
+save_type	./backup_neo/kmeans-pmlp.h	/^    int save_type; $/;"	m	struct:kmeans_parameter	access:public
+schar	./backup_neo/kmeans.cpp	/^typedef signed char schar;$/;"	t	file:
+serialize	./Cluster/Kmeans_Lloyd.h	/^            void serialize (Archive &ar, const unsigned int version){$/;"	f	class:kmeans_lloyd::Kmeans_Lloyd	access:private	signature:(Archive &ar, const unsigned int version)
+serialize	./Collection/Collection.h	/^        void serialize (Archive &ar, const unsigned int version){$/;"	f	class:Collection	access:private	signature:(Archive &ar, const unsigned int version)
+serialize	./Collection/Flexible_vector.h	/^            void serialize (Archive &ar, const unsigned int version){$/;"	f	class:Flexible_vector	access:private	signature:(Archive &ar, const unsigned int version)
+serialize	./Collection/Flexible_vector.h	/^        void serialize (Archive &ar, const unsigned int version){$/;"	f	struct:node	access:public	signature:(Archive &ar, const unsigned int version)
+serialize	./Collection/Flexible_vector.h	/^        void serialize (Archive &ar, const unsigned int version){$/;"	f	struct:problem	access:public	signature:(Archive &ar, const unsigned int version)
+serialize	./DT/DT.h	/^                void serialize (Archive &ar, const unsigned int version){$/;"	f	class:dt::DT	access:private	signature:(Archive &ar, const unsigned int version)
+serialize	./DT/DT.h	/^                void serialize (Archive &ar, const unsigned int version){$/;"	f	class:dt::Matrix	access:private	signature:(Archive &ar, const unsigned int version)
+serialize	./DT/DT.h	/^                void serialize (Archive &ar, const unsigned int version){$/;"	f	class:dt::Node	access:private	signature:(Archive &ar, const unsigned int version)
+serialize	./Kmeans/Kmeans.h	/^                void serialize (Archive &ar, const unsigned int version){$/;"	f	class:kmeans::Kmeans	access:private	signature:(Archive &ar, const unsigned int version)
+serialize	./Kmeans/Kmeans.h	/^                void serialize (Archive &ar, const unsigned int version){$/;"	f	class:kmeans::Matrix	access:private	signature:(Archive &ar, const unsigned int version)
+serialize	./MLalgorithm/MLalgorithm.h	/^            void serialize (Archive &ar, const unsigned int version){$/;"	f	class:MLalgorithm	access:private	signature:(Archive &ar, const unsigned int version)
+shrinking	./backup_neo/kmeans-pmlp.h	/^	int shrinking;	\/* use the shrinking heuristics *\/$/;"	m	struct:svm_parameter	access:public
+size	./Collection/Collection.h	/^        virtual size_t size()=0;$/;"	p	class:Collection	access:public	signature:()
+size	./Collection/Flexible_vector.cpp	/^inline size_t Flexible_vector::size()$/;"	f	class:Flexible_vector	signature:()
+size	./Collection/Flexible_vector.h	/^        size_t size();$/;"	p	class:Flexible_vector	access:public	signature:()
+split	./DT/DT.h	/^            int split(){$/;"	f	class:dt::Node	access:public	signature:()
+stringToNum	./Collection/Flexible_vector.h	/^Type stringToNum(const std::string& str)$/;"	f	signature:(const std::string& str)
+sv_coef	./backup_neo/kmeans-pmlp.h	/^	double **sv_coef;	\/* coefficients for SVs in decision functions (sv_coef[k-1][l]) *\/$/;"	m	struct:svm_model	access:public
+sv_indices	./backup_neo/kmeans-pmlp.h	/^	int *sv_indices;        \/* sv_indices[0,...,nSV-1] are values in [1,...,num_traning_data] to indicate SVs in the training set *\/$/;"	m	struct:svm_model	access:public
+svm_get_labels	./backup_neo/kmeans-pmlp.h	/^void svm_get_labels(const struct svm_model *model, int *label);$/;"	p	signature:(const struct svm_model *model, int *label)
+svm_get_nr_class	./backup_neo/kmeans-pmlp.h	/^int svm_get_nr_class(const struct svm_model *model);$/;"	p	signature:(const struct svm_model *model)
+svm_get_nr_sv	./backup_neo/kmeans-pmlp.h	/^int svm_get_nr_sv(const struct svm_model *model);$/;"	p	signature:(const struct svm_model *model)
+svm_get_sv_indices	./backup_neo/kmeans-pmlp.h	/^void svm_get_sv_indices(const struct svm_model *model, int *sv_indices);$/;"	p	signature:(const struct svm_model *model, int *sv_indices)
+svm_get_svm_type	./backup_neo/kmeans-pmlp.h	/^int svm_get_svm_type(const struct svm_model *model);$/;"	p	signature:(const struct svm_model *model)
+svm_get_svr_probability	./backup_neo/kmeans-pmlp.h	/^double svm_get_svr_probability(const struct svm_model *model);$/;"	p	signature:(const struct svm_model *model)
+svm_model	./backup_neo/kmeans-pmlp.h	/^struct svm_model$/;"	s
+svm_model::SV	./backup_neo/kmeans-pmlp.h	/^	struct svm_node **SV;		\/* SVs (SV[l]) *\/$/;"	m	struct:svm_model	typeref:struct:svm_model::svm_node	access:public
+svm_model::free_sv	./backup_neo/kmeans-pmlp.h	/^	int free_sv;		\/* 1 if svm_model is created by svm_load_model*\/$/;"	m	struct:svm_model	access:public
+svm_model::l	./backup_neo/kmeans-pmlp.h	/^	int l;			\/* total #SV *\/$/;"	m	struct:svm_model	access:public
+svm_model::label	./backup_neo/kmeans-pmlp.h	/^	int *label;		\/* label of each class (label[k]) *\/$/;"	m	struct:svm_model	access:public
+svm_model::nSV	./backup_neo/kmeans-pmlp.h	/^	int *nSV;		\/* number of SVs for each class (nSV[k]) *\/$/;"	m	struct:svm_model	access:public
+svm_model::nr_class	./backup_neo/kmeans-pmlp.h	/^	int nr_class;		\/* number of classes, = 2 in regression\/one class svm *\/$/;"	m	struct:svm_model	access:public
+svm_model::param	./backup_neo/kmeans-pmlp.h	/^	struct svm_parameter param;	\/* parameter *\/$/;"	m	struct:svm_model	typeref:struct:svm_model::svm_parameter	access:public
+svm_model::probA	./backup_neo/kmeans-pmlp.h	/^	double *probA;		\/* pariwise probability information *\/$/;"	m	struct:svm_model	access:public
+svm_model::probB	./backup_neo/kmeans-pmlp.h	/^	double *probB;$/;"	m	struct:svm_model	access:public
+svm_model::rho	./backup_neo/kmeans-pmlp.h	/^	double *rho;		\/* constants in decision functions (rho[k*(k-1)\/2]) *\/$/;"	m	struct:svm_model	access:public
+svm_model::sv_coef	./backup_neo/kmeans-pmlp.h	/^	double **sv_coef;	\/* coefficients for SVs in decision functions (sv_coef[k-1][l]) *\/$/;"	m	struct:svm_model	access:public
+svm_model::sv_indices	./backup_neo/kmeans-pmlp.h	/^	int *sv_indices;        \/* sv_indices[0,...,nSV-1] are values in [1,...,num_traning_data] to indicate SVs in the training set *\/$/;"	m	struct:svm_model	access:public
+svm_node	./backup_neo/kmeans-pmlp.h	/^struct svm_node$/;"	s
+svm_node::index	./backup_neo/kmeans-pmlp.h	/^	int index;$/;"	m	struct:svm_node	access:public
+svm_node::value	./backup_neo/kmeans-pmlp.h	/^	double value;$/;"	m	struct:svm_node	access:public
+svm_parameter	./backup_neo/kmeans-pmlp.h	/^struct svm_parameter$/;"	s
+svm_parameter::C	./backup_neo/kmeans-pmlp.h	/^	double C;	\/* for C_SVC, EPSILON_SVR and NU_SVR *\/$/;"	m	struct:svm_parameter	access:public
+svm_parameter::cache_size	./backup_neo/kmeans-pmlp.h	/^	double cache_size; \/* in MB *\/$/;"	m	struct:svm_parameter	access:public
+svm_parameter::coef0	./backup_neo/kmeans-pmlp.h	/^	double coef0;	\/* for poly\/sigmoid *\/$/;"	m	struct:svm_parameter	access:public
+svm_parameter::degree	./backup_neo/kmeans-pmlp.h	/^	int degree;	\/* for poly *\/$/;"	m	struct:svm_parameter	access:public
+svm_parameter::eps	./backup_neo/kmeans-pmlp.h	/^	double eps;	\/* stopping criteria *\/$/;"	m	struct:svm_parameter	access:public
+svm_parameter::gamma	./backup_neo/kmeans-pmlp.h	/^	double gamma;	\/* for poly\/rbf\/sigmoid *\/$/;"	m	struct:svm_parameter	access:public
+svm_parameter::kernel_type	./backup_neo/kmeans-pmlp.h	/^	int kernel_type;$/;"	m	struct:svm_parameter	access:public
+svm_parameter::nr_weight	./backup_neo/kmeans-pmlp.h	/^	int nr_weight;		\/* for C_SVC *\/$/;"	m	struct:svm_parameter	access:public
+svm_parameter::nu	./backup_neo/kmeans-pmlp.h	/^	double nu;	\/* for NU_SVC, ONE_CLASS, and NU_SVR *\/$/;"	m	struct:svm_parameter	access:public
+svm_parameter::p	./backup_neo/kmeans-pmlp.h	/^	double p;	\/* for EPSILON_SVR *\/$/;"	m	struct:svm_parameter	access:public
+svm_parameter::probability	./backup_neo/kmeans-pmlp.h	/^	int probability; \/* do probability estimates *\/$/;"	m	struct:svm_parameter	access:public
+svm_parameter::shrinking	./backup_neo/kmeans-pmlp.h	/^	int shrinking;	\/* use the shrinking heuristics *\/$/;"	m	struct:svm_parameter	access:public
+svm_parameter::svm_type	./backup_neo/kmeans-pmlp.h	/^	int svm_type;$/;"	m	struct:svm_parameter	access:public
+svm_parameter::weight	./backup_neo/kmeans-pmlp.h	/^	double* weight;		\/* for C_SVC *\/$/;"	m	struct:svm_parameter	access:public
+svm_parameter::weight_label	./backup_neo/kmeans-pmlp.h	/^	int *weight_label;	\/* for C_SVC *\/$/;"	m	struct:svm_parameter	access:public
+svm_problem	./backup_neo/kmeans-pmlp.h	/^struct svm_problem$/;"	s
+svm_problem::l	./backup_neo/kmeans-pmlp.h	/^	int l;$/;"	m	struct:svm_problem	access:public
+svm_problem::x	./backup_neo/kmeans-pmlp.h	/^	struct svm_node **x;$/;"	m	struct:svm_problem	typeref:struct:svm_problem::svm_node	access:public
+svm_problem::y	./backup_neo/kmeans-pmlp.h	/^	double *y;$/;"	m	struct:svm_problem	access:public
+svm_type	./backup_neo/kmeans-pmlp.h	/^	int svm_type;$/;"	m	struct:svm_parameter	access:public
+swap	./backup_neo/kmeans.cpp	/^template <class T> static inline void swap(T& x, T& y) { T t=x; x=y; y=t; }$/;"	f	file:	signature:(T& x, T& y)
+tag	./DT/DT.h	/^            bool tag;$/;"	m	class:dt::Node	access:public
+test_out	./backup_neo/kmeans-pmlp.h	/^    struct cluster_problem test_out;$/;"	m	struct:kmeans_model	typeref:struct:kmeans_model::cluster_problem	access:public
+tol	./backup_neo/kmeans-pmlp.h	/^	double tol; \/\/ optional. The relative increment in the results before declaring convergence.$/;"	m	struct:kmeans_parameter	access:public
+total_cost	./backup_neo/kmeans-pmlp.h	/^	double total_cost;  \/\/cost of clustering$/;"	m	struct:kmeans_model	access:public
+update	./DT/DT.h	/^            void update(std::vector<int> record){$/;"	f	class:dt::Node	access:public	signature:(std::vector<int> record)
+value	./Collection/Flexible_vector.h	/^	 double value;$/;"	m	struct:node	access:public
+value	./backup_neo/kmeans-pmlp.h	/^	double value;$/;"	m	struct:cluster_node	access:public
+value	./backup_neo/kmeans-pmlp.h	/^	double value;$/;"	m	struct:svm_node	access:public
+vec	./DT/DT.h	/^            std::vector<Matrix> vec;$/;"	m	class:dt::Node	access:public
+weight	./backup_neo/kmeans-pmlp.h	/^	double* weight;		\/* for C_SVC *\/$/;"	m	struct:svm_parameter	access:public
+weight_label	./backup_neo/kmeans-pmlp.h	/^	int *weight_label;	\/* for C_SVC *\/$/;"	m	struct:svm_parameter	access:public
+who	./DT/DT.h	/^            int who;$/;"	m	class:dt::Node	access:public
+x	./Collection/Flexible_vector.h	/^    std::vector<node> x;$/;"	m	struct:problem	access:public
+x	./backup_neo/kmeans-pmlp.h	/^	struct cluster_node **x;$/;"	m	struct:cluster_problem	typeref:struct:cluster_problem::cluster_node	access:public
+x	./backup_neo/kmeans-pmlp.h	/^	struct svm_node **x;$/;"	m	struct:svm_problem	typeref:struct:svm_problem::svm_node	access:public
+x_interval	./Collection/Flexible_vector.h	/^    std::vector<int> x_interval;$/;"	m	struct:problem	access:public
+x_ptr	./Collection/Flexible_vector.h	/^    std::vector<int> x_ptr;$/;"	m	struct:problem	access:public
+x_space	./backup_neo/kmeans-fit.c	/^struct cluster_node *x_space;$/;"	v	typeref:struct:cluster_node
+y	./Collection/Flexible_vector.h	/^    std::vector<double> y;$/;"	m	struct:problem	access:public
+y	./backup_neo/kmeans-pmlp.h	/^	double *y;$/;"	m	struct:cluster_problem	access:public
+y	./backup_neo/kmeans-pmlp.h	/^	double *y;$/;"	m	struct:svm_problem	access:public
+~Solver	./backup_neo/kmeans.cpp	/^	virtual ~Solver() {};$/;"	f	class:Solver	access:public	signature:()

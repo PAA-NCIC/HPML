@@ -13,6 +13,13 @@ using namespace dt;
 
 int main(int argc,char *argv[]){
     Core<DT> *p = new Core<DT>();
+    p->f_vector = new Flexible_vector();
+
+    std::string file_in = "../data/car_nor.csv";
+    std::string file_out = "test";
+
+    //Load data
+    p->f_vector->Load(file_in);
     DT *ptr = new DT();
     std::vector<size_t> feat_depth;
     feat_depth.push_back(4);

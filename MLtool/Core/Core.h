@@ -21,6 +21,7 @@ TASK: Core.h
 #include <fstream>  
 #include <string>
 #include "../MLalgorithm/MLalgorithm.h"
+#include "../Collection/Flexible_vector.h"
 
 namespace core{
 
@@ -35,6 +36,9 @@ namespace core{
     template<class T>
         class Core{
             public:
+                //Collection *f_vector;
+                Flexible_vector *f_vector;
+
                 std::string Trim (std::string &str);
                 std::vector<std::string> ReadCSV(std::string pwd);
                 double praser(std::vector<std::string> data, int feat_dim, size_t i, size_t j);

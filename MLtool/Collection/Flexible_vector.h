@@ -9,7 +9,7 @@ TASK: Flexible_vector.h
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/serialization/vector.hpp>
-//#include <boost/serialization/queue.hpp>
+#include <boost/serialization/queue.hpp>
 #include <boost/mpi.hpp>
 #include <algorithm>
 #include <vector>
@@ -25,11 +25,29 @@ TASK: Flexible_vector.h
 
 struct node
 {
+    friend class boost::serialization::access;
+    template <typename Archive>
+        void serialize (Archive &ar, const unsigned int version){
+            ar & index;
+            ar & value;
+            }
+
      int index;
 	 double value;
 };
 struct problem
 {
+    friend class boost::serialization::access;
+    template <typename Archive>
+        void serialize (Archive &ar, const unsigned int version){
+            ar & l;
+            ar & max_feature;
+            ar & y;
+            ar & x_ptr;
+            ar & x_interval;
+            ar & x;
+            }
+    
     int l;
 	int max_feature;
     std::vector<double> y;
@@ -48,19 +66,36 @@ Type stringToNum(const std::string& str)
 }
 
 class Flexible_vector:public Collection{
+    private:
+        friend class boost::serialization::access;
+        template <typename Archive>
+            void serialize (Archive &ar, const unsigned int version){
+                ar & boost::serialization::base_object<Collection>(*this);
+                ar & prob;
+            }
     public:
         problem prob;
-	    ~Flexible_vector();
+	    //~Flexible_vector();
 
         problem Read_file_without_index(std::string filename);
 
         //From Collection
         void Load(std::string filename);
+        //void Store(std::string filename);
         //Collection* partition(size_t number, size_t rank);
+        Flexible_vector* partition(Flexible_vector *origin, size_t number, size_t loc, size_t feat_dim);
         std::vector<double> operator [](size_t loc) const ;
         size_t size();
 
+        void init();
+        void init(size_t l, size_t max_feature);
+        void insert_end(Flexible_vector src, size_t loc);   //insert the loc-th sample of src to the end of prob
+        std::vector<node> get_value_without_label(size_t loc);
+        void add(std::vector<node> src, size_t loc);   //add src to the loc-th sample of prob in fvkl 
+        std::vector<double> FvtoVector() const ;
+        std::vector<std::string> Vector_DtoS(std::vector<double> data) const ;
         //test
+        void print_fv();
         void output_problem(std::string filename,problem prb);
         void main_vector(int argc,char* argv[]);
     

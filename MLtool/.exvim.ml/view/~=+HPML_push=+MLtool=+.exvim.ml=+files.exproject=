@@ -15,7 +15,6 @@ nnoremap <buffer> <silent> <S-2-LeftMouse> :call exproject#confirm_select('shift
 nnoremap <buffer> <silent> <S-CR> :call exproject#confirm_select('shift')
 nnoremap <buffer> <silent> <2-LeftMouse> :call exproject#confirm_select('')
 nnoremap <buffer> <silent> <F1> :call exproject#toggle_help()
-nnoremap <buffer> <silent> <F5> :call vimentry#apply_project_type()
 let &cpo=s:cpo_save
 unlet s:cpo_save
 setlocal autoindent
@@ -103,7 +102,7 @@ setlocal spellfile=
 setlocal spelllang=en
 setlocal statusline=
 setlocal suffixesadd=
-setlocal noswapfile
+setlocal swapfile
 setlocal synmaxcol=3000
 if &syntax != 'exproject'
 setlocal syntax=exproject
@@ -118,12 +117,12 @@ setlocal winfixheight
 setlocal winfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
+let s:l = 25 - ((24 * winheight(0) + 31) / 63)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+25
+normal! 09|
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :
