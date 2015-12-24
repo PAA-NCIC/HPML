@@ -18,6 +18,7 @@ void Flexible_vector::Load(std::string filename)
     prob = Read_file_without_index(filename);
 }
 
+//partition whole original problem to many small pieces and store on every worker
 //Collection* partition(size_t number, size_t rank);
 Flexible_vector* Flexible_vector::partition(Flexible_vector *origin, size_t number, size_t loc, size_t feat_dim)
 {
@@ -53,6 +54,23 @@ Flexible_vector* Flexible_vector::partition(Flexible_vector *origin, size_t numb
     
     std::cout<<"ret.l= "<<ret->prob.l<<" ret.max_feature= "<<ret->prob.max_feature<<std::endl;
     return ret;
+}
+//whole original problem set is stored in every worker and this function just clear the part of problem
+//which each worker can handle.
+size_t Flexible_vector::partition(int problem_l, size_t worker_number, size_t loc)
+{
+
+    //size_t ret = 0;
+    //std::cout<<"origin.l= "<<origin->prob.l<<" origin.max_feature= "<<origin->prob.max_feature<<std::endl;
+    size_t n_records = problem_l;
+    size_t members = n_records/worker_number;
+    if(worker_number*members < n_records) members += 1;
+    //if(loc * members + members < n_records)
+    //    ret = members;
+    //else
+    //    ret = n_records - loc*members; 
+    std::cout<<"size_t partition: members= "<<members<<std::endl;
+    return members;
 }
 
 std::vector<double> Flexible_vector::operator [](size_t loc) const 
@@ -100,6 +118,17 @@ void Flexible_vector::init(size_t l, size_t max_feature)
 
     prob.x_interval.resize(l);
     prob.x.resize(l*max_feature);
+}
+
+void Flexible_vector::GenerateFVfromVector(std::vector<int> src){
+    size_t l = src.size();
+    size_t max_feature = 1;
+    this->init(l,max_feature);
+    for(size_t i = 0; i < l; ++i){
+       prob.x_interval[i] = 1;
+       prob.x[i].index = 1;
+       prob.x[i].value = src[i];
+    }
 }
 
 void Flexible_vector::insert_end(Flexible_vector src, size_t loc)

@@ -49,6 +49,13 @@ namespace core{
                         T* ptr,
                         double eps,
                         size_t feat_dim);
+                T* mainLoop(int argc, char* argv[], 
+                        T *ptr,
+                        size_t oversample,
+                        size_t round,
+                        int k);
+                std::vector<int> AddWeight(std::vector<int> x,std::vector<int> y);
+                std::vector<int> MergeWeight(int rank, boost::mpi::communicator world, std::vector<int> local_weights);
         };
 
 }

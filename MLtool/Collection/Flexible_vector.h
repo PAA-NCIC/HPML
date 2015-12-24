@@ -84,11 +84,13 @@ class Flexible_vector:public Collection{
         //void Store(std::string filename);
         //Collection* partition(size_t number, size_t rank);
         Flexible_vector* partition(Flexible_vector *origin, size_t number, size_t loc, size_t feat_dim);
+        size_t partition(int problem_l, size_t worker_number, size_t loc);
         std::vector<double> operator [](size_t loc) const ;
         size_t size();
 
         void init();
         void init(size_t l, size_t max_feature);
+        void GenerateFVfromVector(std::vector<int> src);    //use int vector to generate Flexible_vector
         void insert_end(Flexible_vector src, size_t loc);   //insert the loc-th sample of src to the end of prob
         std::vector<node> get_value_without_label(size_t loc);
         void add(std::vector<node> src, size_t loc);   //add src to the loc-th sample of prob in fvkl 

@@ -4,5 +4,7 @@ MLtool/.exvim.ml/
 
 *.exvim
 *.txt
+*.o
+*.d
 main_neo.cpp
 makefile
