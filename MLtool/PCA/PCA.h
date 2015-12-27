@@ -20,19 +20,19 @@ namespace pca{
 
     class Matrix{
         private:
-            friend class boost:serialization::access;
+            friend class boost::serialization::access;
             template <typename Archive>
                 void serialize (Archive &ar, const unsigned int version){
                     ar &data;
                     ar &ncol;
                     ar &nrow;
                 }
-        public::
+        public:
             size_t ncol;
             size_t nrow;
             std::vector<double>data;
             void init(size_t nrow, size_t ncol ,std::vector<double> data);
-    }
+    };
 
     class PCA:public MLalgorithm<PCA>{
         private:
@@ -51,7 +51,7 @@ namespace pca{
             PCA* processRecord(std::vector<double> records, size_t feat_dim);
             bool isConverged(PCA *rhs, size_t feat_dim, double eps);
             void finish(std::vector<double> records, size_t feat_dim);
-    }
+    };
 }
 
 
